@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="../jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript"> 
+    $(document).ready(function(){
+
+        $("#PromoteHKpng").hide();
+        $("#PromoteKLpng").hide();
+        $("#PromoteNTpng").hide();
+
+        $("#showHK").show();
+        $("#showKL").show();
+        $("#showNT").show();
+        $("#hideHK").hide();
+        $("#hideKL").hide();
+        $("#hideNT").hide();
+        $("#hideHK").hide();
+        $("#hideKL").hide();
+        $("#hideNT").hide();
+
+      $("#place").change(function(){
+        if(document.getElementById("place").value == "hongkongIsland" ){
+        $("#HKI1").show();
+        $("#KL1").hide();
+        $("#NT1").hide();
+        }else if(document.getElementById("place").value == "kowloon" ){
+        $("#HKI1").hide();
+        $("#KL1").show();
+        $("#NT1").hide();
+        }else if(document.getElementById("place").value == "newTerritors" ){
+        $("#HKI1").hide();
+        $("#KL1").hide();
+        $("#NT1").show();
+        }else{
+        $("#HKI1").show();
+        $("#KL1").show();
+        $("#NT1").show();
+        }
+      });
+
+      $("#btnShowHK").click(function(){
+        $("#showHK").text("Show ").css("color","green");
+      });
+
+      $("#btnHideHK").click(function(){
+        $("#showHK").text("Hide ").css("color","red");
+      });
+
+      $("#btnShowKL").click(function(){
+        $("#showKL").text("Show ").css("color","green");
+
+      });
+
+      $("#btnHideKL").click(function(){
+        $("#showKL").text("Hide ").css("color","red");
+      });
+      $("#btnShowNT").click(function(){
+        $("#showNT").text("Show ").css("color","green");
+      });
+
+      $("#btnHideNT").click(function(){
+        $("#showNT").text("Hide ").css("color","red");
+      });
+
+      $("#btnDelHK").click(function(){
+        if (confirm("Once you click the [OK] button the property will be deleted instanty!")){
+          $("#HKI1").hide();
+        }
+      });
+
+      $("#btnDelKL").click(function(){
+        if (confirm("Once you click the [OK] button the property will be deleted instanty!")){
+          $("#KL1").hide();
+        }
+      });
+
+      $("#btnDelNT").click(function(){
+        if (confirm("Once you click the [OK] button the property will be deleted instanty!")){
+          $("#NT1").hide();
+        }
+      });
+
+      $("#btnSearch").click(function(){
+        $("#HKI1").hide();
+        $("#KL1").hide();
+        $("#NT1").show();
+      });
+
+      $("#btnSearch").dblclick(function(){
+        $("#HKI1").show();
+        $("#KL1").show();
+        $("#NT1").show();
+      });
+
+      $("#btnPromotionHK").click(function(){
+          $("#btnPromotionHK").attr('value', 'Cancal Promote'); 
+          $("#PromoteHKpng").show();
+      });
+
+      $("#btnPromotionHK").dblclick(function(){
+          $("#btnPromotionHK").attr('value', 'Promote');
+          $("#PromoteHKpng").hide();
+        });
+
+        $("#btnPromotionKL").click(function(){
+          $("#btnPromotionKL").attr('value', 'Cancal Promote'); 
+          $("#PromoteKLpng").show();
+      });
+
+      $("#btnPromotionKL").dblclick(function(){
+          $("#btnPromotionKL").attr('value', 'Promote');
+          $("#PromoteKLpng").hide();
+        });
+
+      $("#btnPromotionNT").click(function(){
+          $("#btnPromotionNT").attr('value', 'Cancal Promote'); 
+          $("#PromoteNTpng").show();
+      });
+
+      $("#btnPromotionNT").dblclick(function(){
+          $("#btnPromotionNT").attr('value', 'Promote');
+          $("#PromoteNTpng").hide();
+        });
+
+    });  
+    </script>
+    <meta charset="utf-8">
+    <title>hide&remove</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+  
+  
+    <nav>
+      <label class="logo"><img src="../pic/logo.png"></label>
+      <ul>
+<li><a class="active" href="../../ManagerMainPage.html">Home</a></li>
+<li><a href="../../ViewAndSearchUserInformation.html">Account management
+        </a>
+          <ul>
+</ul>
+</li>
+<li><a href="../../EditInformationManagerVer.html">Edit account
+    </a>
+<li><a href="#">Log-out
+    </a>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+    <section>
+      <center><h1>Manage Your Property</h1></center>
+        <div id="searchingbar">
+          <form action="#">
+                  <input type="search" class="search-data" placeholder="Please Input" required>
+                  <button type="button" id="btnSearch" class="fas fa-search"></button>
+                </form>
+      </div>
+
+      <hr/>
+      <div id="filters">
+        Filters: 
+        <select id="place">
+          <option value="" disabled selected>Select your Districts</option>
+          <option value="all">Show All</option>
+          <option value="hongkongIsland">Hong Kong Island</option>
+          <option value="kowloon">Kowloon</option>
+          <option value="newTerritors">New Territors</option>
+        </select>
+      </div>
+      <hr/>
+      <div id="mainContent">
+        <div id="show" >
+
+          <p id="HKI1" class="showClass"><img src="../pic/Valverde.png" class="icon">&emsp;&emsp; &emsp; 
+            Status:<a style="color:green;" id="showHK">Show</a><img src="../pic/promote.png" class="icon" id="PromoteHKpng">
+            <br/><font size="5">Flat C, Lower Floor, Lower Floor | Valverde | Admiraty</font> 
+            <br/>&emsp;Districts: Hong Kong Island
+            <br/>&emsp;&emsp;<font size="4">SFA 995ft²&emsp;GFA 1,373ft²</font>
+            <br/>&emsp;&emsp;&emsp;＠$43,015&emsp;&emsp;&emsp;＠$31,173<br/>
+            <br/>Selling Price:$42.8M
+            <br/>
+            <input type="button" value="Show" id="btnShowHK" class="btn" />&emsp;
+            <input type="button" value="Hide" id="btnHideHK" class="btn" />&emsp;
+            <input type="button" value="Delete" id="btnDelHK" class="btn" />&emsp;
+            <input type="button" value="Edit" id="btnEditHK" class="btn" onclick="window.location.href='updatePropert.html'" />&emsp;
+            <input type="button" value="Promote" id="btnPromotionHK" class="btn" />&emsp;
+          </p>
+
+          <p id="KL1" class="showClass"><img src="../pic/Ultima.png" class="icon">&emsp;&emsp; &emsp; 
+            Status:<a style="color:green;" id="showKL">Show</a><img src="../pic/promote.png" class="icon" id="PromoteKLpng">
+            <br/><font size="5">Flat A, Higher Floor, Block 8, Phase 1 | Ultima | Ho Man Tin</font>
+            <br/>&emsp;Districts: Kowloon
+            <br/>&emsp;Age: 04 Years &emsp; Effciency Ratio:/
+            <br/>&emsp;&emsp;<font size="4">SFA1,247ft²</font>
+            <br/>&emsp;&emsp;&emsp;@$44<br/>
+            <br/>Rent Price:$55,000
+            <br/>
+            <input type="button" value="Show" id="btnShowKL" class="btn" />&emsp;
+            <input type="button" value="Hide" id="btnHideKL" class="btn" />&emsp;
+            <input type="button" value="Delete" id="btnDelKL" class="btn" />&emsp;
+            <input type="button" value="Edit" id="btnEditKL" class="btn" />&emsp;
+            <input type="button" value="Promote" id="btnPromotionKL" class="btn" />&emsp;
+          </p>
+
+          <p id="NT1" class="showClass"><img src="../pic/Yuccie.png" class="icon">&emsp;&emsp; &emsp; 
+            Status:<a style="color:green;" id="showNT">Show</a><img src="../pic/promote.png" class="icon" id="PromoteNTpng">
+            <br/><font size="5">Block 3, Lower Floor, Flat A | Yuccie Square | Yuen Long</font>
+            <br/>&emsp;Districts: New Territors
+            <br/>&emsp;&emsp;<font size="4">SFA 643ft²</font>
+            <br/>&emsp;&emsp;&emsp;&emsp;＠$13,997<br/>
+            <br/>Selling Price:9M
+            <br/>
+            <input type="button" value="Show" id="btnShowNT" class="btn" />&emsp;
+            <input type="button" value="Hide" id="btnHideNT" class="btn" />&emsp;
+            <input type="button" value="Delete" id="btnDelNT" class="btn" />&emsp;
+            <input type="button" value="Edit" id="btnEditNT" class="btn" />&emsp;
+            <input type="button" value="Promote" id="btnPromotionNT" class="btn" />&emsp;
+          </p>
+
+        </div>
+      </div>
+    </section>
+  </body>
+  
+  
+  
+  
+  
+  
+</html>

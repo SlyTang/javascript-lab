@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#facebook").hide();
+
+        $("#login").click(function(){
+          var password = $("#password").val();
+          var ac = $("#accName").val();
+          if(password==""&&ac == ""){
+            alert("Please input the login ID and password");
+          }
+          else if(ac=="") alert("Please input the login ID");
+          else if(password =="") alert("Please input the password");
+          else {
+            $( ".login-form-container" ).animate({height:"100px"});
+            $("#accName").hide();
+            $("#password").hide();
+            $("#login").hide();
+            $("#registerButton").hide();
+            $("#loginIcon").hide();
+            $("#facebook").show();
+            if(ac=="CompanyManager"){
+              setTimeout(function(){
+                window.location.href = "ManagerMainPage.html";
+              },5000);
+            }else if(ac=="NormalUser"){
+              setTimeout(function(){
+                window.location.href = "NormalUser.html";
+              },5000);
+              
+            }else if(ac=="PropertyAgent"){
+              setTimeout(function(){
+                window.location.href = "PropertyAgent.html";
+              },5000);
+            }else{
+              alert("Can't find user");
+              $("#accName").val("");
+              $("#password").val("");
+            }
+          }
+        });
+      });
+    </script>
+    <meta charset="utf-8">
+    <title>Dropdown Menu Bar</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="loadingAnimation.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="login_style.css">
+  </head>
+  <body>
+    <nav>
+      <label class="logo"><img src="dragon/pic/logo.png"></label>
+      <ul>
+<li><a class="active" href="#">Home</a></li>
+<li><a href="#">TEST1
+          <i class="fas fa-caret-down"></i>
+        </a>
+          <ul>
+<li><a href="#">hi1</a></li>
+<li><a href="#">hi2</a></li>
+<li><a href="#">hi3</a></li>
+</ul>
+</li>
+<li><a href="#">TEST2
+          <i class="fas fa-caret-down"></i>
+        </a>
+          <ul>
+<li><a href="#">hihi1</a></li>
+<li><a href="#">hihi2</a></li>
+<li><a href="#">hihi3
+              <i class="fas fa-caret-right"></i>
+            </a>
+              <ul>
+<li><a href="#">yo</a></li>
+<li><a href="#">yo1</a></li>
+<li><a href="#">yo2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Feedback</a></li>
+</ul>
+</nav>
+
+
+
+  <div class = "login-form-container">
+    <div id='facebook' >
+      <div id='block_1' class='facebook_block'></div>
+      <div id='block_2' class='facebook_block'></div>
+      <div id='block_3' class='facebook_block'></div>
+    </div>
+      <ul class = "login-list">
+      <li style="text-align: center;" id="loginIcon"><h2>Login</h2></li>
+      <li><input type = "text" name = "accName" id="accName"placeholder="Login ID"></li>
+      <li><input type = "password" name = "password" id="password"placeholder="Password">
+          <br><a href="registerPage.html" id="registerButton" style="text-align: left;">Sign up an account</a></li>
+      <li><input type = "submit" name = "login" id="login" value="Login"></li>
+      </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#errorMessage").hide();
+            $("#pswd").blur(function(){
+                if($("#pswd2").val() != ""){
+                    if($("#pswd").val() != $("#pswd2").val()) {
+                        $("#pswd").css("background-color","#D6D6FF");
+                        $("#pswd2").css("background-color","#D6D6FF");
+                        $("#errorMessage").show();
+                    }else{
+                        $("#pswd").css("background-color","#D3CCCB");
+                        $("#pswd2").css("background-color","#D3CCCB");
+                        $("#errorMessage").hide();
+                    }
+                }
+                
+            });
+            $("#pswd2").blur(function(){
+                if($("#pswd").val() != $("#pswd2").val()) {
+                    $("#pswd").css("background-color","#D6D6FF");
+                    $("#pswd2").css("background-color","#D6D6FF");
+                    $("#errorMessage").show();
+                }else{
+                    $("#pswd").css("background-color","#D3CCCB");
+                    $("#pswd2").css("background-color","#D3CCCB");
+                    $("#errorMessage").hide();
+                }
+                
+            });
+            $("#submit").click (function(){
+                alert("You have been registered to be a member");
+                window.location.href="dragon/MainNoLogin.html";
+            });
+
+            
+        });
+        </script>
+    <meta charset="utf-8">
+    <title>Dropdown Menu Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registerPage.css">
+</head> 
+<body>
+    <nav>
+        <label class="logo"><img src="pic/logo.png"></label>
+        <ul>
+<li><a class="active" href="dragon/MainNoLogin.html">Home</a></li>
+<li><a href="login.html">Login</a></li>
+</ul>
+</nav>
+  </div>
+  <div class="register-form">
+    <ul class = "register-list">
+        <li>Register Form</li>
+        <div class="isa_error" id="errorMessage">
+            <img src="errorIcon.png" alt="error" id="errorIcon" />
+            Password is not the same,   Please input a same password
+         </div>
+        <li><input type = "text" name = "ac" placeholder="Login ID" ></li>
+        <li><input type = "text" name = "firstName" placeholder="First Name"></li>
+        <li><input type="text" name = "lastName" placeholder="Last Name"></li>
+        <li><input type = "text" name = "phoneNum" placeholder="Phone Number"></li>
+        <div id="passwordInput">
+            <li><input type="password" name = "pswd" id="pswd"placeholder="Password"></li>
+            <li><input type="password" name = "pswd2" id="pswd2" placeholder="Confirm the Password"></li>
+        </div>
+        
+        <li><input type = "submit" name = "submit" id="submit" value = "Confirm" ></li>
+    </ul>
+</div>
+
+
+</body>
+</html>

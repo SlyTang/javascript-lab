@@ -1,0 +1,36 @@
+.inputValue{
+    padding:10px;
+}
+.bodyContent{
+    text-align:center;
+    padding: 50px;
+}
+.listOfInput , .textOfInput{
+    text-align: left;
+    display: inline-block;
+    
+}
+.textOfInput{
+    vertical-align: top;
+    font-size: 15px;
+    border-left:1px solid;
+    padding-left:60px;
+    
+}
+.listOfInput{
+    padding-left: 200px;
+    width: 20%;
+    border-right:1px solid;
+}
+.listOfInput li, .textOfInput li{
+    height:22px;
+}
+input[name="price"], input[name="loanRatio"],input[name="mortgageYears"],input[name="mortgageInterest"],input[name="monthlyIncome"] {
+    width:60%;
+}
+input[name="priceNum"], input[name="loanRatioNum"],input[name="mortgageYearsNum"],input[name="mortgageInterestNum"]{
+    width:45px;
+}
+input[name="monthlyIncomeNum"] {
+    width:65px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#edit").hide();
+        $("#cancelSelect").hide();
+        $("#delete").hide();
+
+        $("#standardChartered").click(function(){
+            $("#bankName").val("Standard Chartered");
+            $("#mortgageInterest").val("2.5");
+            $("#edit").show();
+            $("#delete").show();
+            $("#cancelSelect").show();
+        });
+
+        $("#taiSangBank").click(function(){
+            $("#bankName").val("Tai Sang Bank");
+            $("#mortgageInterest").val("3");
+            $("#edit").show();
+            $("#delete").show();
+            $("#cancelSelect").show();
+        });
+
+        $("#hangSengBank").click(function(){
+            $("#bankName").val("Hang Seng");
+            $("#mortgageInterest").val("1");
+            $("#edit").show();
+            $("#delete").show();
+            $("#cancelSelect").show();
+        });
+
+        $("#cancelSelect").click(function(){
+            $("#bankName").val("");
+            $("#mortgageInterest").val("");
+            $("#edit").hide();
+            $("#cancelSelect").hide();
+            $("#delete").hide();
+        });
+
+        $("#edit").click(function(){
+            alert("Edited record");
+            window.location.href = 'EditBank.html';
+        });    
+
+        $("#editForm").submit(function(){
+            alert("New mortgage is added");
+        });
+
+        $("#try").click(function(){
+            var win = window.open("calculaterEditedMortgage.html", '_blank');
+             win.focus();
+        });
+    });
+
+    </script>
+    <meta charset="utf-8">
+    <title>Dropdown Menu Bar</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="registerPage.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="loadingAnimation.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="EditBank.css">
+  </head>
+  <body>
+    <nav>
+        <label class="logo"><img src="dragon/pic/logo.png"></label>
+        <ul>
+  <li><a class="active" href="PropertyAgent.html">Home</a></li>
+  <li><a href="dragon/PropertyManagement/hideRemoveProperty.html">Property management</a></li>
+  <li><a href="dragon/PropertyManagement/saleOrRental.html">Add property</a></li>
+  <li><a href="dragon/AppointmentManagement/AcceptAppointment.html">Appointment</a></li>
+  <li><a href="EditBank.html">Update mortgage</a></li>
+  <li><a href="EditInformationAgentVer.html">Edit account</a></li>
+  <li><a href="dragon/MainNoLogin.html">Log-out</a></li>
+  </ul>
+  </nav>
+  <div style="text-align: center; ">
+      <div class="title" ><h3>Edit bank mortgage</h3></div>
+      <div style="display:inline-block; width:15%;"><select name="bank" size="40"  style="width: 100%;">  
+        <option value="standardChartered" id="standardChartered"> Standard Chartered </option>  
+        <option value="taiSangBank" id="taiSangBank">Tai Sang Bank </option>  
+        <option value="hangSengBank" id="hangSengBank">Hang Seng </option>  
+        </select> </div>
+      <div style="display: inline-block; vertical-align:top; padding-top:13%;position:relative;height:390px;">
+            <form style="text-align: left; width:400px" id="editForm" action="AddedBank.html">
+                <div class="text"><label  >Bank Name:</label></div><input id="bankName"><br />
+                <div  class="text"><label >Mortgage Interest:</label></div><input id="mortgageInterest"><br/>
+                <input type="submit" value="add to list" class="submit"/>
+                <input type="button" value="delete" class="delete" id="delete"/>
+                <input type="button" value="edit" class="edit" id="edit"/>
+                <input type="button"  value="cancelSelect" id="cancelSelect"  >
+            </form>
+            <input type="button" id="try" value="Try"/>
+      </div>
+  </div>
+
+</body>
+</html>

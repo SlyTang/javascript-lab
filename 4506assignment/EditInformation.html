@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+            $("#errorMessage").hide();
+            $("#facebook").hide();
+            $("#pswd").blur(function(){
+                if($("#pswd2").val() != ""){
+                    if($("#pswd").val() != $("#pswd2").val()) {
+                        $("#pswd").css("background-color","#D6D6FF");
+                        $("#pswd2").css("background-color","#D6D6FF");
+                        $("#errorMessage").show();
+                    }else{
+                        $("#pswd").css("background-color","#D3CCCB");
+                        $("#pswd2").css("background-color","#D3CCCB");
+                        $("#errorMessage").hide();
+                    }
+                }
+                
+            });
+            $("#pswd2").blur(function(){
+                if($("#pswd").val() != $("#pswd2").val()) {
+                    $("#pswd").css("background-color","#D6D6FF");
+                    $("#pswd2").css("background-color","#D6D6FF");
+                    $("#errorMessage").show();
+                }else{
+                    $("#pswd").css("background-color","#D3CCCB");
+                    $("#pswd2").css("background-color","#D3CCCB");
+                    $("#errorMessage").hide();
+                }
+                
+            });
+            $("#pswd").blur(function(){
+                if($("#pswd2").val() != ""){
+                    if($("#pswd").val() != $("#pswd2").val()) {
+                        $("#pswd").css("background-color","#D6D6FF");
+                        $("#pswd2").css("background-color","#D6D6FF");
+                        $("#errorMessage").show();
+                    }else{
+                        $("#pswd").css("background-color","#D3CCCB");
+                        $("#pswd2").css("background-color","#D3CCCB");
+                        $("#errorMessage").hide();
+                    }
+                }
+                
+            });
+            $("#pswd2").blur(function(){
+                if($("#pswd").val() != $("#pswd2").val()) {
+                    $("#pswd").css("background-color","#D6D6FF");
+                    $("#pswd2").css("background-color","#D6D6FF");
+                    $("#errorMessage").show();
+                }else{
+                    $("#pswd").css("background-color","#D3CCCB");
+                    $("#pswd2").css("background-color","#D3CCCB");
+                    $("#errorMessage").hide();
+                }
+                
+            });
+            $("#submit").click(function(){
+                if($("#pswd").val()!= "" && $("#pswd").val()==$("#pswd2").val()){
+                    $("#detail").hide();
+                    $("#facebook").show();
+                    setTimeout(function(){
+                        $("#facebook").hide();
+                        alert("Information edited");
+                        window.location.href = "ManagerMainPage.html";
+                    },5000);
+                    
+                }
+                else{
+                    alert("Please input value password");
+                }
+            });
+
+        });
+    </script>
+    <meta charset="utf-8">
+    <title>Dropdown Menu Bar</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="registerPage.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="loadingAnimation.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="editInformation.css">
+  </head>
+  <body>
+    <nav>
+      <label class="logo">TEST</label>
+      <ul>
+<li><a class="active" href="#">Home</a></li>
+<li><a href="#">TEST1
+          <i class="fas fa-caret-down"></i>
+        </a>
+          <ul>
+<li><a href="#">hi1</a></li>
+<li><a href="#">hi2</a></li>
+<li><a href="#">hi3</a></li>
+</ul>
+</li>
+<li><a href="#">TEST2
+          <i class="fas fa-caret-down"></i>
+        </a>
+          <ul>
+<li><a href="#">hihi1</a></li>
+<li><a href="#">hihi2</a></li>
+<li><a href="#">hihi3
+              <i class="fas fa-caret-right"></i>
+            </a>
+              <ul>
+<li><a href="#">yo</a></li>
+<li><a href="#">yo1</a></li>
+<li><a href="#">yo2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Feedback</a></li>
+</ul>
+</nav>
+<div class="register-form">
+    <ul class = "register-list">
+        <div id='facebook' >
+            <div id='block_1' class='facebook_block'></div>
+            <div id='block_2' class='facebook_block'></div>
+            <div id='block_3' class='facebook_block'></div>
+        </div>
+        <div id="detail">
+            <li>Edit information from</li>
+            <div class="isa_error" id="errorMessage" >
+                <img src="errorIcon.png" alt="error" id="errorIcon" />
+                Password is not the same,   Please input a same password
+            </div>
+            <li>Login ID: CompanyManager</li>
+            <li id="firstNameBar" class="bar">First name:<input type = "text" name = "firstName" placeholder="First Name" value="Low"></li>
+            <li id="lastNameBar" class="bar"> Last name:<input type="text" name = "lastName" placeholder="Last Name" value="Shing yuu"></li>
+            <li id="phoneNumberBar" class="bar">Phone:<input type = "text" name = "phoneNum" placeholder="Phone Number" value="51234567"></li>
+            <div id="passwordInput" class="bar">
+                New password:
+                <li style="margin:0;"><input type="password" name = "pswd" id="pswd"placeholder="Password" ></li>
+                Confirm password:
+                <li id="password2"><input type="password" name = "pswd2" id="pswd2" placeholder="Confirm the Password"></li>
+                
+            </div>
+            <br/>
+            
+            <li><input type = "submit" name = "submit" id="submit" value = "Confirm"></li>
+            <li><input type= "button" name="cancal" id="cancel"  value="Cancel"/></li>
+        </div>
+        
+    </ul>
+ 
+</div>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+/*set border to the form*/ 
+    
+form { 
+border: 3px solid #f1f1f1; 
+} 
+/*assign full width inputs*/ 
+
+input[type=text], 
+input[type=password] { 
+width: 100%; 
+padding: 12px 20px; 
+margin: 8px 0; 
+display: inline-block; 
+border: 1px solid #ccc; 
+box-sizing: border-box; 
+} 
+/*set a style for the buttons*/ 
+    
+button { 
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 14px 20px; 
+    margin: 8px 0; 
+    border: none; 
+    cursor: pointer; 
+    width: 100%; 
+} 
+/* set a hover effect for the button*/ 
+    
+button:hover { 
+    opacity: 0.8; 
+} 
+/*set extra style for the cancel button*/ 
+    
+.cancelbtn { 
+    width: auto; 
+    padding: 10px 18px; 
+    background-color: #f44336; 
+} 
+/*centre the display image inside the container*/ 
+    
+.imgcontainer { 
+    text-align: center; 
+    margin: 24px 0 12px 0; 
+} 
+/*set image properties*/ 
+    
+img.avatar { 
+    width: 40%; 
+    border-radius: 50%; 
+} 
+/*set padding to the container*/ 
+.container { 
+    padding: 16px; 
+} 
+/*set the forgot password text*/ 
+    
+span.psw { 
+    float: right; 
+    padding-top: 16px; 
+} 
+/*set styles for span and cancel button on small screens*/ 
+    
+@media screen and (max-width: 300px) { 
+    span.psw { 
+        display: block; 
+        float: none; 
+    } 
+    .cancelbtn { 
+        width: 100%; 
+    } 
+} 
+
+
+.login-form-container{
+    width:250px;
+    height: auto;
+    padding: 20px 30px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    margin: auto;
+    
+    margin-top: 25vh;
+}
+#facebook{
+    margin: 0;  
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+ul.login-list{
+    list-style-type: none;
+    /* text-align: center; */
+}
+
+ul.login-list li{
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+ul.login-list li a{
+    
+    font-size: 10px;
+}
+
+/* Select page */
+.select-form-container{
+    width:250px;
+    height: auto;
+    padding: 20px 30px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    margin: auto;
+    margin-top: 25vh;
+}
+
+ul.select-list{
+    list-style-type: none;
+    /* text-align: center; */
+    display: flex;
+    
+    
+}
+
+ul.select-list li{
+    margin-bottom: 20px;
+    width: 250px;
+    padding-top: 30%;
+}
+
+ul.select-list li a{
+    
+    font-size: 10px;
+}
+
+ul.select-list li input[type = "button"]{
+    padding : 20px;
+    width: 100px;
+    margin: 10px;
+    
+}
+
+/*End*/
+
+ul.login-list li input[type="text"], ul.login-list li input[type="password"]{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color:#D3CCCB;
+    border: none;
+    border-radius: 5px;
+}
+
+ul.login-list li input[type="submit"]{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(77, 147, 226);
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+ul.login-list li input[type="submit"]:hover{
+    background-color: #FFF;
+    color: black;
+}
+
+/*Register*/
+
+
+.register-form{
+    width:250px;
+    height: auto;
+    padding: 20px 30px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+ul.register-list{
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+}
+
+ul.register-list li{
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+ul.register-list li input[type="text"], ul.register-list li input[type="password"]{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color:#D3CCCB;
+    border: none;
+    border-radius: 5px;
+}
+
+ul.register-list li input[type="submit"]{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(77, 147, 226);
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+ul.register-list li input[type="submit"]:hover{
+    background-color: #FFF;
+    color: black;
+}
+
+
+/* Horizontal NavBar */
+
+.navbar {
+    overflow: hidden;
+    background-color: #a6dcef;
+  }
+  
+  .navbar a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color:#FA4E7E;
+    font-family: fantasy;
+  }
+  
+  .navbar a:hover {
+    background-color: #2191b9;
+    color: #f2f2ff;
+  }
+  
+
+
+/* Order form*/
+
+.flex-container{
+    width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: serif;
+}
+
+.form-title{
+
+background: #4096ee; 
+background: -moz-linear-gradient(top,  #4096ee 98%, #4096ee 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #4096ee 98%,#4096ee 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #4096ee 98%,#4096ee 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+
+    /*
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195A8), color-stop(100, #70EAFF));
+    background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+    background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+    background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+    background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);*/
+    border-radius:5px 5px 0 0 ;
+    padding: 20px;
+    color: #f6f6f6;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    background-color: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+}
+
+.flex form{
+    flex: 4;
+}
+
+.flex form label{
+    display: block;
+    margin: 15px;
+
+}
+
+.form-title h2 {
+    margin : 0px;
+    padding-left: 15px;
+}
+
+
+/* Profile */
+
+.pro-flex-container{
+    width: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: serif;
+}
+
+.pro-flex-container-form-title{
+    background: #4096ee; 
+    background: -moz-linear-gradient(top,  #4096ee 98%, #4096ee 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #4096ee 98%,#4096ee 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #4096ee 98%,#4096ee 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+    border-radius:5px 5px 0 0 ;
+    padding: 20px;
+    color: #f6f6f6;
+}
+
+.pro-flex-container-flex{
+    display: flex;
+    flex-direction: row;
+    background-color: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    padding: 30px;
+    text-align : center;
+}
+
+.pro-flex-container-flex form{
+    flex: 4;
+}
+
+
+
+.pro-flex-container-flex form table tr td input[type=text] ,
+.pro-flex-container-flex form table tr td input[type=password]{
+    border-style: groove;
+    height: 30px;
+    padding: 5px ;
+    width: auto;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    display:inline-block;
+    border: 1px solid #dadada;
+
+}
+
+.pro-title h2 {
+    margin : 0px;
+    padding-left: 15px;
+}
+
+.pro-flex-container-flex form input[type=submit]{
+    width: 350px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(77, 147, 226);
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    margin-top: 10px;
+}
+
+.deleteBtn{
+    width: 250px;
+    text-align: center;
+    margin-left: 80%;
+    margin-top: 50px;
+    padding: 10px 0px;
+    background-color: rgb(77, 147, 226);
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+
+}
+
+/* Make the order*/
+
+.order-container{
+    width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: serif;
+}
+
+.order-form-title{
+    background: #4096ee; 
+    background: -moz-linear-gradient(top,  #4096ee 98%, #4096ee 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #4096ee 98%,#4096ee 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #4096ee 98%,#4096ee 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+    border-radius:5px 5px 0 0 ;
+    padding: 20px;
+    color: #f6f6f6;
+}
+
+.order-flex{
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+}
+
+.order-flex form{
+  
+}
+
+
+.order-flex form label{
+    display: block;
+    margin: 15px;
+}
+
+.order-flex label input[type=text] {
+    
+    width: 70%;
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    border: 1px solid #dadada;
+}
+
+.order-title h2 {
+    margin : 0px;
+    padding-left: 15px;
+}
+
+.order-flex form input[type=submit]{
+    margin-left: 150px; 
+    width: 250px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgb(77, 147, 226);
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+
+}
+
+.order-flex form button{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(77, 147, 226);
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+
+}
+.list{
+    width:840px;
+    display: flex;
+    flex-direction: row;
+    background-color: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+    flex: 4;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.list th{
+    width:120px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+.list td{
+    padding : 5px;
+    text-align: center;
+}
+
+.list table tr td input[type=submit] {
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}

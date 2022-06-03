@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var counter = 3;
+            $("#cancelSearching").hide();
+            $("#normalUser").hide();
+            $("#switchToAgentUser").hide();
+            $(".addAgent-form-container").hide();
+            $("#cancel").hide();
+            $("#addAgentBtn").click(function(){
+                $("#addAgentBtn").hide(20);
+                $(".addAgent-form-container").show(600);
+                $("#cancel").show(700);
+            });
+            $("#cancel").click(function(){
+                $(this).hide(700);
+                $(".addAgent-form-container").hide(600);
+                $("#addAgentBtn").show(100);
+                $("#newUserName").val("");
+                $("#newUserID").val("");
+                $("#newPassword").val("");
+            });
+            $("#addNewAgent").click(function(){
+                var newUserID = $("#newUserID").val();
+                var newUserName = $("#newUserName").val();
+                var newUserPassword = $("#newPassword").val();
+                var output = "";
+                
+                if(newUserID == "") output += "agent ID";
+                if(newUserName == ""){
+                    if(output !="")output+=","; output += "agent Name";
+                } 
+                if(newUserPassword == ""){
+                    if(output !="")output+=" and "; output += "agent password";
+                } 
+                if(output != ""){
+                    output = "Please input the "+output+" !";
+                }else if(output == ""){
+                    var d = new Date();
+
+                    var month = d.getMonth()+1;
+                    var day = d.getDate();
+
+                    var date = d.getFullYear() + '/' +
+                    (month<10 ? '0' : '') + month + '/' +
+                    (day<10 ? '0' : '') + day;
+                    counter++;
+                    output +="A new agent has been created\nImportant !!\nPlease note that information \nAgent name       :"+newUserName+"\nAgent Login ID  :"+newUserID+"\nAgent Password :"+newUserPassword;
+                    $("#newAgent").append("<div class='user'>"+
+                    "<label for='name'>Name:  </label><label>"+newUserName+"</label><br/><br/>"+
+                    "<label>Entry date: "+date+"</label><br/><br/>"+
+                    "<label>Login: </label>"+"<label for='enableBtn"+counter+"'>Enable </label>"+
+                    "<input type='radio' name='allowLogin"+counter+"' value='enable' id='enableBtn"+counter+"' checked='checked'/>"+
+                    "<label for='disableBtn"+counter+"'>Disable </label>"+
+                    "<input type='radio' name='allowLogin"+counter+"' value='disable' id='disableBtn"+counter+"' /><br/><br/>"+
+                    "<button value='View user comments' id='viewUserComments'>View User Comments</button>"+
+                    "</div>");
+                    $("#cancel ").hide(700);
+                $(".addAgent-form-container").hide(600);
+                $("#addAgentBtn").show(100);
+                $("#newUserName").val("");
+                $("#newUserID").val("");
+                $("#newPassword").val("");
+                    
+                }
+                
+                alert(output);
+            });
+            $("#switchToNormalUser").click(function(){
+                $("#agent").hide();
+                $(this).hide();
+                $("#switchToAgentUser").show();
+                
+                $("#normalUser").show();
+
+            });
+            $("#switchToAgentUser").click(function(){
+                $(this).hide();
+                $("#normalUser").hide();
+                $("#switchToNormalUser").show();
+                $("#agent").show();
+                
+            });
+            $("#search").click(function(){
+                if($("#Agent").show())
+                    if($("#searchCondition").val() == "Employee b"){
+                        $("#newAgent").hide();
+                        $("#user1").hide();
+                        $("#user3").hide();
+                        $("#addAgentBtn").hide();
+                        $("#cancelSearching").show();
+                    }
+            });
+            $("#cancelSearching").click(function(){
+                $("#user1").show();
+                $("#user3").show();
+                $("#addAgentBtn").show();
+                $("#newAgent").show();
+                $(this).hide();
+                $("#searchCondition").val("");
+            });
+            $("#viewUserComments").click(function(){
+                window.location.href = "viewUsersCommentsManagerVer.html";
+            });
+            $("#viewAgentComments").click(function(){
+                window.location.href = "viewAgentCommentsManagerVer.html";
+            });
+        });
+    </script>
+    <meta charset="utf-8">
+    <title>Dropdown Menu Bar</title>
+    <link rel="stylesheet" href="ViewAndSearchUserInformation.css">
+    <link rel="stylesheet" href="style.css">
+
+
+  </head>
+  <body>
+    <nav>
+        <label class="logo"><img src="dragon/pic/logo.png"></label>
+        <ul>
+  <li><a class="active" href="ManagerMainPage.html">Home</a></li>
+  <li><a href="ViewAndSearchUserInformation.html">Account management
+            <i class="fas fa-caret-down"></i>
+          </a>
+            <ul>
+  </ul>
+  </li>
+  <li><a href="dragon/AppointmentManagement/ViewArrangedAppointmentsDetails.html">All arranged appointments details</a></li>
+
+  <li><a href="EditInformationManagerVer.html">Edit account
+          <i class="fas fa-caret-right"></i>
+      </a>
+  <li><a href="dragon/MainNoLogin.html">Log-out
+      <i class="fas fa-caret-down"></i>
+      </a>
+      </li>
+  </ul>
+  </li>
+  </ul>
+  </li>
+  </ul>
+  </nav>
+  <br/>
+
+<button id="cancel"></button><br/>
+<div id="btnBar">
+    
+
+    <Button id="switchToNormalUser">Switch to normal user </Button>
+    <Button id="switchToAgentUser">Switch to Agent user </Button>
+    <input id="searchCondition">
+    <Button id="search">Search user</Button>
+        
+</div>
+
+<div>
+    <fieldset id="agent" name="agent">
+        <legend>Agent</legend>
+
+
+        <div class="user" id="user1">
+            <label for="name">Name:  周偉光</label><br/><br/>
+            <label>Entry date: 2007/05/12</label><br/><br/>
+            <label >Login:  </label>
+            <label for="enableBtn1">Enable</label>
+            <input type="radio" name="allowLogin1" value="enable" id="enableBtn1" checked="checked"/>
+            <label for="disableBtn1">Disable</label>
+            <input type="radio" name="allowLogin1" value="disable" id="disableBtn1"/><br/><br/>
+            <button value="View user comments" id="viewUserComments">View User Comments</button>
+        </div>
+        <div class="user" id="user2">
+            <label for="name">Name:  Employee b</label><br/><br/>
+            <label>Entry date: 2020/06/12</label><br/><br/>
+            <label >Login:  </label>
+            <label for="enableBtn2">Enable</label>
+            <input type="radio" name="allowLogin2" value="enable" id="enableBtn2" checked="checked"/>
+            <label for="disableBtn2">Disable</label>
+            <input type="radio" name="allowLogin2" value="disable" id="disableBtn2"/><br/><br/>
+            <button value="View user comments" id="viewUserComments">View User Comments</button>
+        </div>
+        <div class="user" id="user3">
+            <label for="name">Name:  Employee c </label><br/><br/>
+            <label>Entry date: 2020/07/12</label><br/><br/>
+            <label >Login:  </label>
+            <label for="enableBtn3">Enable</label>
+            <input type="radio" name="allowLogin3" value="enable" id="enableBtn3" />
+            <label for="disableBtn3">Disable</label>
+            <input type="radio" name="allowLogin3" value="disable" id="disableBtn3" checked="checked"/><br/><br/>
+            <button value="View user comments" id="viewUserComments">View User Comments</button>
+        </div>
+        <div id="newAgent" ></div>
+        <button id="addAgentBtn" >Add agent</button><br/>
+        <button id="cancelSearching">Cancel searching</button>
+    </fieldset>
+</div>
+    <fieldset id="normalUser">
+        <legend>Normal user</legend>
+        <div class="user">
+            <label for="name">Name:  User a</label><br/><br/>
+            <label>Entry date: 2020/05/12</label><br/><br/>   
+            <button id="viewAgentComments">View Agent Comments</button><br/><br/>          
+        </div>
+    </fieldset>
+    <div class = "addAgent-form-container">
+        <ul class = "agentData-list">
+        <li style="text-align: center;">Add new agent</li>
+        <li><input type = "text" id = "newUserName" placeholder="Agent Name"></li>
+        <li><input type = "text" id = "newUserID" placeholder="Login ID"></li>
+        <li><input type = "password" id = "newPassword" placeholder="Password">
+        <li><input type = "submit" id= "addNewAgent" value="Add agent"></li>
+        </ul>
+    </div>
+</body>
+</html>

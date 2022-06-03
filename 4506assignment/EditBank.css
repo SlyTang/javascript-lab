@@ -1,0 +1,26 @@
+.text{
+    width: 40%;
+    display:inline-block;
+}
+.submit{
+    width:100%;
+}
+form input{
+    width:59%;
+}
+.delete , .edit{
+    width:49%;
+}
+.title{
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+#cancelSelect{
+    width:100%;
+}
+#try{
+    width:100%;
+    position: absolute;
+    right:    0px;
+    bottom:   0;
+}

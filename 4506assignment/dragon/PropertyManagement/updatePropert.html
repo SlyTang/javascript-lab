@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="../jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript"> 
+    $(document).ready(function(){
+      $("#btnEdit").click(function(){
+        $("#SFA").html("＠$"+$("#SFAid").val());
+        $("#GFA").html("＠$"+$("#GFAid").val());
+        $("#price").html("$"+$("#priceid").val());
+        alert("Update success!");
+      });
+    });      
+    </script>
+    <meta charset="utf-8">
+    <title>update</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+  
+  
+    <nav>
+      <label class="logo"><img src="../pic/logo.png"></label>
+      <ul>
+<li><a class="active" href="../../PropertyAgent.html">Home</a></li>
+<li><a href="hideRemoveProperty.html">Property management</a></li>
+<li><a href="saleOrRental.html">Add property</a></li>
+<li><a href="../AppointmentManagement/AcceptAppointment.html">Appointment</a></li>
+<li><a href="../../EditBank.html">Update mortgage</a></li>
+<li><a href="../../EditInformationAgentVer.html">Edit account</a>
+<li><a href="#">Log-out</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+   <section>
+    <a href="hideRemoveProperty.html">Back To Management</a><center><h1>Update Property Information</h1></center>
+
+    <div id="mainContent">
+      
+      <div id="show" >
+
+        <p id="HKI1" class="showClass"><img src="../pic/Valverde.png" class="icon">&emsp;&emsp; &emsp; 
+          <br/><font size="5">Flat C, Lower Floor, Lower Floor | Valverde | Admiraty</font> 
+          <br/>&emsp;Districts: Hong Kong Island
+          <br/>&emsp;Age: 22 Years &emsp; Effciency Ratio:72%
+          <br/>&emsp;&emsp;<font size="4">SFA 995ft²&emsp;GFA 1,373ft²</font>
+          <br/>&emsp;&emsp;&emsp;<label id="SFA">＠$43,015</label>&emsp;&emsp;&emsp;<label id="GFA">＠$31,173</label><br/>
+          <br/><label id="price">Price:$42.8M</label> 
+          <br/>
+        </p>
+      </div>
+      
+    <table width="700px">
+      * Column can not be change
+      <tr><td>Location: *</td><td><input type="text" value="Flat C, Lower Floor, Lower Floor | Valverde | Admiraty" readonly style="width: 400px; color: gray;" /></td></tr>
+      <tr><td>Districts: *</td><td><input type="text" value="Hong Kong Island" readonly readonly style="width: 150px; color: gray;" /></td></tr>
+
+      <tr><td>Age: *</td><td><input type="Norway" value="4" readonly style="width: 100px; color: gray;" /></td></tr>
+      <tr><td>Effciency Ratio: *</td><td><input type="Norway" value="72%" readonly readonly style="width: 100px; color: gray;" /></td></tr>
+
+      <tr><td>SFA:</td><td><p class="placeholder" data-placeholder="$"><input type="text" style="width: 100px;" class="price" id="SFAid" /></p></td></tr>
+      <tr><td>GFA:</td><td><p class="placeholder" data-placeholder="$"><input type="text" style="width: 100px;" class="price" id="GFAid" /></p></td></tr>
+      <tr><td>Selling Price:</td><td><p class="placeholder" data-placeholder="$"><input type="text" style="width: 100px;" class="price" id="priceid"/></p></td></tr>
+      <tr><td>  <center><input type="button" value="Edit" id="btnEdit"/> <input type="button" value="Cancel" id="btnCanel" /></center></td></tr>
+  </table>
+  
+    
+    </section>
+  </body>
+  
+</html>

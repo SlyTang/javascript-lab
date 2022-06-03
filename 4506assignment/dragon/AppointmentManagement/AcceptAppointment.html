@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="../jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript"> 
+    $(document).ready(function(){
+      $("#p1Table").hide();
+      $("#p2Table").hide();
+      $("#p3Table").hide();
+
+      $("#donep2").hide();
+      $("#doneTDp2").hide();
+      $("#doneMessagep2").hide();
+
+      $("#notYetTDp3").hide();
+      $("#notYetp3").hide();
+      $("#donep3").hide();
+      $("#doneTDp3").hide();
+      $("#doneMessagep3").hide();
+
+
+      $("#btnP1").click(function(){
+        $("#allAppointment").hide();
+        $("#p1Table").show();
+      });
+
+      $("#btnP2").click(function(){
+        var p2doneCount=0;
+        $("#allAppointment").hide();
+        $("#p2Table").show();
+        $("#p2btnCancel").click(function(){
+          $("#p2timeF").val("13:30pm");
+          $("#p2MeetPF").val("Mei Foo MTR Station Exit B");
+          $("#btnNotYet").html("Not Yet").css('background-color',"#faafa6");
+          p2doneCount--;
+        });
+        $("#btnNotYet").click(function(){
+          $("#btnNotYet").html('Done').css('background-color', '#90f53e');
+          p2doneCount++;
+        });
+        $("#btnNotYet").dblclick(function(){
+          $("#btnNotYet").html("Not Yet").css('background-color',"#faafa6");
+          p2doneCount--;
+        });
+        $("#btnEditp2").click(function(){
+          if (confirm("confirm?")){
+            $("#p2Time").html($("#p2timeF").val());
+            $("#p2Timetd").html($("#p2timeF").val());
+            $("#p2timeF").val($("#p2timeF").val());
+            $("#p2MeetP").html($("#p2MeetPF").val());
+            if(p2doneCount==1){
+              $("#notYetTDp2").hide();
+              $("#doneTDp2").show();
+              $("#donep2").show();
+              $("#notYetp2").hide();
+              $("#p2Form").hide();
+              $("#notDoneMessagep2").hide();
+              $("#doneMessagep2").show();
+            }
+          }
+        });
+        
+        
+
+      });
+
+      $("#btnP3").click(function(){
+        var p3doneCount=0;
+        $("#allAppointment").hide();
+        $("#p3Table").show();
+
+        $("#p3btnCancel").click(function(){
+          $("#waitComfirmp3").show();
+          $("#notYetTDp3").hide();
+          $("#doneTDp3").hide();
+
+          $("#p3timeF").val("??:?? ?m");
+          $("#p3MeetPF").val("Waiting for confirm");
+          $("#btnWaitForAccept").html("Waiting for accept").css('background-color',"yellow");
+          p3doneCount=0;
+        });
+
+        $("#btnWaitForAccept").click(function(){
+          $("#btnWaitForAccept").html("Not Yet").css('background-color',"#faafa6");
+          p3doneCount=1;
+        });
+
+        $("#btnWaitForAccept").dblclick(function(){
+          $("#btnWaitForAccept").html('Done').css('background-color', '#90f53e');
+          p3doneCount=2;
+        });
+        $("#btnEditp3").click(function(){
+          if (confirm("confirm?")){
+            $("#p3Time").html($(" #p3timeF").val());
+            $("#p3Timetd").html($("#p3timeF").val());
+            $("#p3timeF").val($("#p3timeF").val());
+            $("#p3MeetP").html($("#p3MeetPF").val());
+
+            if(p3doneCount==1){
+              $("#waitComfirmp3").hide();
+              $("#notYetTDp3").show();
+              $("#doneTDp3").hide();
+              $("#waitp3").hide();
+              $("#notYetp3").show();
+            }else if(p3doneCount==2){
+              $("#waitComfirmp3").hide();
+              $("#waitp3").hide();
+              $("#notYetTDp3").hide();
+              $("#doneTDp3").show();
+              $("#donep3").show();
+              $("#notYetp3").hide();
+              $("#p3Form").hide();
+              $("#notDoneMessagep3").hide();
+              $("#doneMessagep3").show();
+            }
+          }
+        });
+      });
+
+      $(".btnBack").click(function(){
+        $("#allAppointment").show();
+        $("#p1Table").hide();
+        $("#p2Table").hide();
+        $("#p3Table").hide();
+      });
+
+
+
+    });      
+    </script>
+    <meta charset="utf-8">
+    <title>Accept the appointment</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+  
+  
+    <nav>
+      <label class="logo"><img src="../pic/logo.png"></label>
+      <ul>
+<li><a class="active" href="../../PropertyAgent.html">Home</a></li>
+<li><a href="../PropertyManagement/hideRemoveProperty.html">Property management</a></li>
+<li><a href="../PropertyManagement/saleOrRental.html">Add property</a></li>
+<li><a href="AcceptAppointment.html">Appointment</a></li>
+<li><a href="../../EditBank.html">Update mortgage</a></li>
+<li><a href="../../EditInformationAgentVer.html">Edit account</a>
+<li><a href="../MainNoLogin.html">Log-out</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+    <section>
+      <center><h1><span style="text-decoration:underline;">Your appointment</span></h1></center>
+      <br/>
+      <br/>
+
+      <center>
+        <table border="1" id="allAppointment">
+
+          <tr bgcolor="#c2c6c4">
+            <th width="">Your Booking</th>
+            <th width="">Date</th> 
+            <th width="200px">status</th>
+            <th width="">More details</th>
+
+          </tr>
+
+          <tr id="p1" style="text-align:center">
+            <td>Flat A, Middle Floor, Block 2 | Eltanin - Square Mile | Tai Kok Tsui</td>
+            <td>11/11 13:30 pm</td>
+            <td bgcolor="#90f53e">Done</td>
+            <td><button style="width:200px" id="btnP1">Check</button></td>
+          </tr>
+
+          <tr id="p2" style="text-align:center">
+            <td>Flat B, Middle Floor | Broadway 024 Phase I | Mei Foo Sun Chuen</td>
+            <td>26/11 <label id="p2Time">13:30 pm</label></td>                  
+            <td bgcolor="#faafa6" id="notYetp2">Not Yet</td>
+            <td bgcolor="#90f53e" id="donep2">Done</td>
+            <td><button style="width:200px" id="btnP2">Check</button></td>
+          </tr>
+          <tr id="p3" style="text-align:center">
+            <td>Flat C, Lower Floor, Lower Floor | Valverde | Admiralty</td>
+            <td>28/11 <label id="p3Time"></label></td>
+            <td bgcolor="Yellow" id="waitp3">Waiting for accept</font></td>
+            <td bgcolor="#faafa6" id="notYetp3">Not Yet</td>
+            <td bgcolor="#90f53e" id="donep3">Done</td>
+            <td><button style="width:200px" id="btnP3">Check</button></td>
+          </tr>
+        </table>
+      </center>
+<br/>
+
+
+
+    <center>
+      <div id="p1Table">
+      <table  border="1">
+        <tr bgcolor="#c2c6c4" >
+          <th width="40%">Your Booking</th>
+            <th width="10%">Date</th> 
+            <th width="20%">Meeting place</th>
+            <th width="10%">Customer </th>
+            <th width="10%">status</th>
+            <th width="10%">Show all</th>
+        </tr>
+        <tr  style="text-align:center">
+          <td>Flat A, Middle Floor, Block 2 | Eltanin - Square Mile | Tai Kok Tsui</td>
+          <td>11/11 13:30pm</td>
+          <td>Olympic Station Exit A</td>
+          <td><a href="../../ViewAgentCommentsAgentVer.html">Chai Tai Men</a></td>
+          <td bgcolor="#90f53e">Done</td>
+          <td><button style="width:200px" class="btnBack">back</button></td>
+        </tr>
+      </table>
+      <br/>
+      <br/>
+      <br/>
+    <pre>  
+You can not modify status is [Done] details!
+      </pre> 
+    </div>
+    </center>
+
+
+
+    <center>
+      <div id="p2Table">
+      <table  border="1">
+        <tr bgcolor="#c2c6c4" >
+          <th width="40%">Your Booking</th>
+            <th width="10%">Date</th> 
+            <th width="20%">Meeting place</th>
+            <th width="10%">Customer </th>
+            <th width="10%">status</th>
+            <th width="10%">Show all</th>
+        </tr>
+        <tr style="text-align:center">
+          <td>Flat B, Middle Floor | Broadway 024 Phase I | Mei Foo Sun Chuen</td>
+          <td>26/11 <label id="p2Timetd">13:30 pm</label></td>
+          <td><label id="p2MeetP">Mei Foo MTR Station Exit B</label></td>
+          <td><a href="../../ViewAgentCommentsAgentVer.html">Chai Tai Men</a></td>
+          <td bgcolor="#faafa6" id="notYetTDp2">Not Yet</td>
+          <td bgcolor="#90f53e" id="doneTDp2">Done</td>
+          <td><button style="width:200px" class="btnBack">back</button></td>
+        </tr>
+      </table>
+      <br/>
+      <br/>
+      <br/>
+
+      <div id="p2Form">
+      <table border="1">
+        <h1>Confirm details form</h1>
+        <tr Height="50"><th>Your Booking : *</th><td><input type="text" value="Flat B, Middle Floor | Broadway 024 Phase I | Mei Foo Sun Chuen" readonly style="height: 50px;width: 400px; color: gray;" /></td></tr>  
+        <tr><th>Date : </th><td><p class="placeholder" data-placeholder="26/11"><input id="p2timeF" type="text" style="width: 350px;" value="13:30 pm" class="date" /></p></td></tr>
+        <tr Height="50"><th>Meeting place :</th><td><input type="text" value="Mei Foo MTR Station Exit B" id="p2MeetPF" style="width: 400px;height: 50px;"/></td></tr>
+        <tr Height="50"><th>Customer : *</th><td><input type="text" value="Chai Tai Men" readonly  style="width: 400px;height: 50px; color: gray;"/></td></tr>
+        <tr Height="50"><th>status :</th><td ><button  id="btnNotYet" style="width:400px;height: 50px;background-color:#faafa6;">Not Yet</button></td></tr>
+        <tr><td colspan="2"> <center><input type="button"  class="btn" value="Edit" id="btnEditp2"/> 
+          <input type="button"  class="btn" value="Cancel" id="p2btnCancel" /></center></td></tr>
+      </table> 
+      </div>
+    <pre id="doneMessagep2">  
+      You can not modify status is [Done] details!
+            </pre>
+    <pre id="notDoneMessagep2">  
+      Note:
+      * Column can not be change
+      Once you change the status to done, You can not modify the details anymore!!!
+      Click the button to change the status
+    </pre> 
+    </div>
+    </center>
+
+
+
+    <center>
+      <div id="p3Table">
+      <table  border="1">
+        <tr bgcolor="#c2c6c4" >
+          <th width="40%">Your Booking</th>
+            <th width="10%">Date</th> 
+            <th width="20%">Meeting place</th>
+            <th width="10%">Customer </th>
+            <th width="10%">status</th>
+            <th width="10%">Show all</th>
+        </tr>
+        <tr style="text-align:center">
+          <td>Flat C, Lower Floor, Lower Floor | Valverde | Admiralty</td>
+          <td>28/11 <label id="p3Timetd"></label></td>
+          <td><label id="p3MeetP">Waiting for comfirm</label></td>
+          <td><a href="../../ViewAgentCommentsAgentVer.html">Chai Tai Men</a></td>
+          <td bgcolor="Yellow" id="waitComfirmp3">Waiting for comfirm</td>
+          <td bgcolor="#faafa6" id="notYetTDp3">Not Yet</td>
+          <td bgcolor="#90f53e" id="doneTDp3">Done</td>
+          <td><button style="width:200px" class="btnBack">back</button></td>
+        </tr>
+      </table>
+      <br/>
+      <br/>
+      <br/>
+
+      <div id="p3Form">
+      <table border="1">
+        <h1>Confirm details form</h1>
+        <tr Height="50"><th>Your Booking : *</th><td><input type="text" value="Flat C, Lower Floor, Lower Floor | Valverde | Admiralty" readonly style="height: 50px;width: 400px; color: gray;" /></td></tr>  
+        <tr><th>Date : </th><td><p class="placeholder" data-placeholder="28/11"><input id="p3timeF" type="text" style="width: 350px;" value="??:?? ?m" class="date" /></p></td></tr>
+        <tr Height="50"><th>Meeting place :</th><td><input type="text" value="Waiting for comfirm" id="p3MeetPF" style="width: 400px;height: 50px;"/></td></tr>
+        <tr Height="50"><th>Customer : *</th><td><input type="text" value="Chai Tai Men" readonly  style="width: 400px;height: 50px; color: gray;"/></td></tr>
+        <tr Height="50"><th>status :</th><td ><button  id="btnWaitForAccept" style="width:400px;height: 50px;background-color:Yellow;">Waiting for accept</button></td></tr>
+        <tr><td colspan="2"> <center><input type="button"  class="btn" value="Edit" id="btnEditp3"/> 
+          <input type="button"  class="btn" value="Cancel" id="p3btnCancel" /></center></td></tr>
+      </table> 
+      </div>
+    <pre id="doneMessagep3">  
+      You can not modify status is [Done] details!
+            </pre>
+    <pre id="notDoneMessagep3">  
+      Note:
+      * Column can not be change
+      Once you change the status to done, You can not modify the details anymore!!!
+      Click the button to change the status
+    </pre> 
+    </div>
+    </center>
+
+    </section>
+
+  </body>
+
+</html>

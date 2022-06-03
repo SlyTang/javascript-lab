@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="../jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function(){
+        });
+    </script>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+  
+  
+    <nav>
+      <label class="logo"><img src="../pic/logo.png"></label>
+      <ul>
+<li><a class="active" href="../../PropertyAgent.html">Home</a></li>
+<li><a href="hideRemoveProperty.html">Property management</a></li>
+<li><a href="saleOrRental.html">Add property</a></li>
+<li><a href="../AppointmentManagement/AcceptAppointment.html">Appointment</a></li>
+<li><a href="../../EditBank.html">Update mortgage</a></li>
+<li><a href="../../EditInformationAgentVer.html">Edit account</a>
+<li><a href="#">Log-out</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+    <section>
+        <div id="saleForm">
+        <h1>Input information to sale or rental you property</h1>
+        <br />
+        <form method="POST" action="saleOrRental3.html">
+            <center>
+            <table>
+                <tr><td colspan="2">
+                <h2>Selling / Leasing Price:</h2><br/>
+                </td></tr>
+                <tr><td>
+                District*
+                </td>
+                <td>
+                    <select id="place">
+                        <option value="" disabled selected>Select your Districts</option>
+                        <option value="hongkongIsland">Hong Kong Island</option>
+                        <option value="kowloon">Kowloon</option>
+                        <option value="newTerritors">New Territors</option>
+                      </select>
+                </td></tr>
+                <tr><td>
+                Estate / Building: *
+                </td>
+                <td>
+                <input type="text" required placeholder="Input your Estate / Building"><br/>
+                </td></tr>
+                <br/>
+                </td></tr>
+                <tr><td>
+                Block:
+                </td>
+                <td>
+                <input type="text"><br/>
+                </td></tr>
+                <tr><td>
+                Floor: *
+                </td>
+                <td>
+                <input type="number" required><br/>
+                </td></tr>
+                <tr><td>
+                Unit: *
+                </td>
+                <td>
+                <input type="text" required><br/>
+                </td></tr>
+                <tr><td colspan="2">
+                    <center><input type="submit"></center>
+                </td></tr>
+            </table>
+            </center>
+        </form>
+        </div>
+
+
+    </section>
+  </body>
+  
+  
+  
+  
+  
+  
+</html>

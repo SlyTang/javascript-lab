@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="../jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript"> 
+    $(document).ready(function(){
+
+      $("#place").change(function(){
+        if(document.getElementById("place").value == "hongkongIsland" ){
+          $("#HKI1").show();
+          $("#HKI2").show();
+          
+          $("#KL1").hide();          
+          $("#KL2").hide();
+
+          $("#NT1").hide();
+          $("#NT2").hide();
+        }else if(document.getElementById("place").value == "kowloon" ){
+          $("#HKI1").hide();
+          $("#HKI2").hide();
+
+          $("#KL1").show();
+          $("#KL2").show();
+
+          $("#NT1").hide();
+          $("#NT2").hide();
+        }else if(document.getElementById("place").value == "newTerritors" ){
+          $("#HKI1").hide();
+          $("#HKI2").hide();
+
+          $("#KL1").hide();
+          $("#KL2").hide();
+
+          $("#NT1").show();
+          $("#NT2").show();
+        }else{
+          $("#HKI1").show();
+          $("#HKI2").show();
+
+          $("#KL1").show();
+          $("#KL2").show();
+
+          $("#NT1").show();
+          $("#NT2").show();
+        }
+      });
+
+
+      $("#rent").change(function(){
+        if(document.getElementById("rent").value == "lessR" ){
+          $("#HKI1").show();
+          $("#HKI2").show();
+          
+          $("#KL1").hide();          
+          $("#KL2").show();
+
+          $("#NT1").hide();
+          $("#NT2").show();
+        }else if(document.getElementById("rent").value == "higherR" ){
+          $("#HKI1").hide();
+          $("#HKI2").hide();
+
+          $("#KL1").show();
+          $("#KL2").hide();
+
+          $("#NT1").show();
+          $("#NT2").hide();
+        }else{
+          $("#HKI1").show();
+          $("#HKI2").show();
+
+          $("#KL1").show();
+          $("#KL2").show();
+
+          $("#NT1").show();
+          $("#NT2").show();
+        }
+      });
+
+      $("#btnSearch").click(function(){
+        $("#HK1").hide();
+        $("#KL1").show();
+        $("#NT1").hide();
+        $("#HK2").hide();
+      });
+
+      $("#btnSearch").dblclick(function(){
+        $("#HK1").show();
+        $("#KL1").show();
+        $("#NT1").show();
+        $("#HK2").show();
+      });
+
+    });      
+    </script>
+    <meta charset="utf-8">
+    <title>Rent</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+  
+  
+    <nav>
+      <label class="logo"><img src="../pic/logo.png"></label>
+        <ul>
+  <li><a class="active" href="../../NormalUser.html">Home</a></li>
+  <li><a href="../SearchBrowsing/searchBuy.html">Buy</a></li>
+  <li><a href="../SearchBrowsing/searchRent.html">Rent</a></li>
+  <li><a href="../AppointmentManagement/RankAppointment.html">Your appointment</a></li>
+
+  <!-- <li><a href="#">Comments
+            <i class="fas fa-caret-down"></i>
+          </a>
+            <ul>
+  <li><a href="#">Customer</a></li>
+  <li><a href="#">Agent</a></li> -->
+  <li><a href="../../EditInformationCustomerVer.html">Edit account
+      </a></li>
+    <li><a href="../../calculater.html">Mortgage Calculater
+    </a></li>
+  <li><a href="../MainNoLogin.html">Log-out
+      </a></li>
+     
+  </nav>
+
+    <section>
+      <div id="searchingbar">
+        <form action="#">
+                <input type="search" class="search-data" placeholder="Please Input" >
+                <button type="button" id="btnSearch" class="fas fa-search"></button>
+              </form>
+    </div>
+      <div id="typebar">
+          <ul>
+            <li><a href="searchBuy.html">Buy</a></li>
+            <li><a href="searchRent.html">Rent</a></li>
+          </ul>
+      </div>
+      <hr/>
+      <div id="filters">
+        Filters: 
+        <select id="place">
+          <option value="" disabled selected>Select your Districts</option>
+          <option value="all">Show All</option>
+          <option value="hongkongIsland">Hong Kong Island</option>
+          <option value="kowloon">Kowloon</option>
+          <option value="newTerritors">New Territors</option>
+        </select>
+        <select id="rent">
+          <option value="" disabled selected>Rent</option>
+          <option value="all">Show All</option>
+          <option value="lessR">>=5,000</option>
+          <option value="higherR"><=5,000</option>
+        </select>
+      </div>
+      <hr/>
+      <div id="mainContent">
+
+        <p id="KL1" class="showClass"><img src="../pic/Ultima.png" class="icon">&emsp;&emsp; &emsp; 
+          <br/><font size="5">Flat A, Higher Floor, Block 8, Phase 1 | Ultima | Ho Man Tin</font>
+          <br/>&emsp;Districts: Kowloon
+          <br/>&emsp;Age: 04 Years &emsp; Effciency Ratio:/
+          <br/>&emsp;&emsp;<font size="4">SFA1,247ft²</font>
+          <br/>&emsp;&emsp;&emsp;@$44<br/>
+          <br/>Rent Price:$55,000
+          <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;           
+          <input type="button" value="More Informations" class="btn">
+          <input type="button" value="Make An Appointment" class="btn" onclick="window.location.href='../AppointmentManagement/MakeAppointment.html'">
+
+        </p>
+
+        <p id="HK1" class="showClass"><img src="../pic/Princeton.png" class="icon">&emsp;&emsp; &emsp; 
+          <br/><font size="5">Flat A | Princeton Residence | North Point / Fortress Hill</font>
+          <br/>&emsp;Districts: Hong Kong Island
+          <br/>&emsp;Age: 54 Years &emsp; Effciency Ratio:/
+          <br/>&emsp;&emsp;<font size="4">SFA 420ft²</font>
+          <br/>&emsp;&emsp;&emsp;@$/<br/>
+          <br/>Rent Price:$22,800
+          <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;           
+          <input type="button" value="More Informations" class="btn">
+          <input type="button" value="Make An Appointment" class="btn" onclick="window.location.href='../AppointmentManagement/MakeAppointment.html'">
+
+        </p>
+
+        <p id="HK2" class="showClass"><img src="../pic/Seymour.png" class="icon">&emsp;&emsp; &emsp; 
+          <br/><font size="5">Flat B, Lower Floor | Seymour |Western Mid-Levels</font>
+          <br/>&emsp;Districts: 
+          <br/>&emsp;Age: 09Years &emsp; Effciency Ratio:74%
+          <br/>&emsp;&emsp;<font size="4">SFA 1,398ft²&emsp;GFA 1,878ft²</font>
+          <br/>&emsp;&emsp;&emsp;@$50&emsp;&emsp;@$37<br/>
+          <br/>Rent Price:$70,000
+          <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;           
+          <input type="button" value="More Informations" class="btn">
+          <input type="button" value="Make An Appointment" class="btn" onclick="window.location.href='../AppointmentManagement/MakeAppointment.html'">
+
+        </p>
+
+        <p id="NT1" class="showClass"><img src="../pic/Green.png" class="icon">&emsp;&emsp; &emsp; 
+          <br/><font size="5">Flat E, Higher Floor, Tower 1 | Green Code | Fanling</font>
+          <br/>&emsp;Districts: New Territors
+          <br/>&emsp;Age: 06Years &emsp; Effciency Ratio:78%
+          <br/>&emsp;&emsp;<font size="4">SFA 300ft²&emsp;GFA 384ft²</font>
+          <br/>&emsp;&emsp;&emsp;@$37&emsp;&emsp;@$29<br/>
+          <br/>Rent Price:$11,000
+          <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;           
+          <input type="button" value="More Informations" class="btn" >
+          <input type="button" value="Make An Appointment" class="btn" onclick="window.location.href='../AppointmentManagement/MakeAppointment.html'">
+
+        </p>
+
+      </div>
+    </section>
+  </body>
+  
+  
+  
+  
+  
+  
+</html>

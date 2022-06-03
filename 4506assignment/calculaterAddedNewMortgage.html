@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+    <script type="text/javascript"></script>
+    <meta charset="utf-8">
+    <title>Dropdown Menu Bar</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="registerPage.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="CalculaterStyle.css">
+  </head>
+  <body>
+    <nav>
+        <label class="logo"><img src="pic/logo.png"></label>
+          <ul>
+    <li><a class="active" href="NormalUser.html">Home</a></li>
+    <li><a href="dragon/SearchBrowsing/searchBuy.html">Buy</a></li>
+    <li><a href="dragon/SearchBrowsing/searchRent.html">Rent</a></li>
+    <li><a href="dragon/AppointmentManagement/RankAppointment.html">Your appointment</a></li>
+  
+    <!-- <li><a href="#">Comments
+              <i class="fas fa-caret-down"></i>
+            </a>
+              <ul>
+    <li><a href="#">Customer</a></li>
+    <li><a href="#">Agent</a></li> -->
+    <li><a href="EditInformationCustomerVer.html">Edit account
+        </a></li>
+      <li><a href="calculater.html">Mortgage Calculater
+      </a></li>
+    <li><a href="dragon/MainNoLogin.html">Log-out
+        </a></li>
+       
+    </nav>
+<div class="bodyContent">
+    <label><h1>Mortgage Calculater</h1></label>
+    <br/>
+    <form class="inputValue" action="CalculaterResult.html">
+        <ul class="textOfInput">
+            <li><label for="price" >Price:</label></li>
+                
+            <li><label for="loanRatio">Loan Ratio(%):</label></li>
+                
+            <li><label for="mortgageYears">Mortgage Years:</label></li>
+            <li><label for="">Mortgage Interest(%):</label></li>
+            <li></li>
+            <li>Monthly income: </li>
+            <li>Non first home Stamp:</li>
+        </ul>
+        <ul class="listOfInput">
+            <li><input name="price" type="range" min="10" max="4500" oninput="this.form.priceNum.value=this.value"/>
+                <input type="number" name="priceNum" min="10" max="4500" oninput="this.form.price.value=this.value"/>萬</li>
+            <li><input name="loanRatio"type="range" min="1" max="100" oninput="this.form.loanRatioNum.value=this.value"/>
+                <input type="number" name="loanRatioNum"min="1" max="100" oninput="this.form.loanRatio.value=this.value"/></li>
+            <li><input type="range" name="mortgageYears" max="35" min="3" oninput="this.form.mortgageYearsNum.value=this.value"/>
+                <input type="number" name="mortgageYearsNum" max="35" min="3"  oninput="this.form.mortgageYears.value=this.value"/></li>
+            <li><input type="range" name="mortgageInterest" max="12.5" min="0.5" oninput="this.form.mortgageInterestNum.value=this.value"/>
+                <input type="number" name="mortgageInterestNum" max="12.5" min="0.5" type="number" oninput="this.form.mortgageInterest.value=this.value"/>
+                </li>
+            <li> <select oninput="this.form.mortgageInterestNum.value=this.value;this.form.mortgageInterest.value=this.value">
+                <option value="">Select bank</option>
+                <option value="2.5">Standard Chartered</option>
+                <option value="3">Tai Sang Bank</option>
+                <option value="2">Hang Seng Bank</option>
+                <option value="1">asd</option>
+                </select></li>
+            
+            <li><input type="range" name="monthlyIncome" max="500000" min="10000" oninput="this.form.monthlyIncomeNum.value=this.value"/>
+                <input type="number" name="monthlyIncomeNum" max="500000" min="10000"  oninput="this.form.monthlyIncome.value=this.value"/></li>
+            <li><input type="checkbox" name="IsFirstTime" value="true">First time?</input></li>
+        </ul>
+        <div>
+            <input type="submit" >
+            <input type="reset">  
+        </div>      
+    </form>
+
+</div>
+
+</div>
+</body>
+</html>

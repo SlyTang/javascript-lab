@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+    });
+    </script>
+    <meta charset="utf-8">
+    <title>Dropdown Menu Bar</title>
+    <link rel="stylesheet" href="dragon/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  </head>
+  <body>
+    <nav>
+      <label class="logo"><img src="pic/logo.png"></label>
+        <ul>
+  <li><a class="active" href="NormalUser.html">Home</a></li>
+  <li><a href="dragon/SearchBrowsing/searchBuy.html">Buy</a></li>
+  <li><a href="dragon/SearchBrowsing/searchRent.html">Rent</a></li>
+  <li><a href="dragon/AppointmentManagement/RankAppointment.html">Your appointment</a></li>
+
+  <!-- <li><a href="#">Comments
+            <i class="fas fa-caret-down"></i>
+          </a>
+            <ul>
+  <li><a href="#">Customer</a></li>
+  <li><a href="#">Agent</a></li> -->
+  <li><a href="EditInformationCustomerVer.html">Edit account
+      </a></li>
+    <li><a href="calculater.html">Mortgage Calculater
+    </a></li>
+  <li><a href="dragon/MainNoLogin.html">Log-out
+      </a></li>
+     
+  </nav>
+<section>
+  <div id="searchingbar">
+    <form action="#">
+            <input type="search" class="search-data" placeholder="Please Input" required>
+            <button type="button" id="btnSearch" class="fas fa-search"></button>
+          </form>
+</div>
+<div>
+    Popular searches:
+    <br/>&emsp;<a href="">Hong Kong Island</a>,&emsp;<a href="">Kowloon</a>,&emsp;<a href="dragon/SearchBrowsing/demoMoreInfo.html">Valverde</a>
+</div>
+
+<div>
+    <a style="color:#f05e1b;" href="dragon/SearchBrowsing/searchBuy.html" id="showHK"><h2>More ></h2></a>
+    <h1>&emsp;New Propertie</h1><br/>
+    
+    <div id="HKI1" class="show" style="float: left; margin-left: 6px;"><img src="dragon/pic/Valverde.png" class="icon">&emsp;&emsp; &emsp; 
+        <img src="dragon/pic/promote.png" class="icon" id="PromoteHKpng">
+        <br/><font size="5">Flat C, Lower Floor, Lower Floor | Valverde | Admiraty</font> 
+        <br/>&emsp;Districts: Hong Kong Island
+        <br/>&emsp;Age: 22 Years &emsp; Effciency Ratio:72%
+        <br/>&emsp;&emsp;<font size="4">SFA 995ft²&emsp;GFA 1,373ft²</font>
+        <br/>&emsp;&emsp;&emsp;＠$43,015&emsp;&emsp;&emsp;＠$31,173<br/>
+        <br/>Selling Price:$42.8M
+        <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;            
+        <input type="button" value="More Informations" class="btn" onclick="window.location.href='dragon/SearchBrowsing/demoMoreInfo.html'">
+        <br/>
+    </div>
+    <div id="NT1" class="show" style="float: left; margin-left: 6px;"><img src="dragon/pic/Yuccie.png" class="icon">&emsp;&emsp; &emsp; 
+        <br/><font size="5">Block 3, Lower Floor, Flat A | Yuccie Square | Yuen Long</font>
+        <br/>&emsp;Districts: New Territors
+        <br/>&emsp;Age: 04 Years &emsp; Effciency Ratio:/
+        <br/>&emsp;&emsp;<font size="4">SFA 643ft²</font>
+        <br/>&emsp;&emsp;&emsp;&emsp;＠$13,997<br/>
+        <br/>Selling Price:9M
+        <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;            
+        <input type="button" value="More Informations" class="btn">
+        <br/>
+    </div>
+    <div id="KL1" class="show" style="float: left; margin-left: 6px;"><img src="dragon/pic/Eltanin.png" class="icon">
+        <br/><font size="4">Flat A, Middle Floor, Block 2 | Eltanin - Square Mile | Tai Kok Tsui</font>
+        <br/>&emsp;Districts: Kowloon
+        <br/>&emsp;Age: 03 Years &emsp; Effciency Ratio:/
+        <br/>&emsp;&emsp;<font size="4">SFA 390ft²</font>
+        <br/>&emsp;&emsp;&emsp;&emsp;＠$21,487<br/>
+        <br/>Selling Price:8.38M
+        <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="button" value="More Informations" class="btn">
+    </div>
+</div>
+<div>
+    <h1>Propertie</h1>
+    <div class="side" style="float: left; margin-left: 6px;">
+        <table border="2">
+        <ul>
+            <li><font size="5" >Buy</font><hr/></li>
+            <li>All<hr/></li>
+            <li>Hong Long Island<hr/></li>
+            <li>Kowloon<hr/></li>
+            <li>New Territors<hr/></li>
+            <li><font size="5" >Rent</font><hr/></li>
+            <li>All<hr/></li>
+            <li>Hong Long Island<hr/></li>
+            <li>Kowloon<hr/></li>
+            <li>New Territors<hr/></li>
+        </ul>
+        </table>
+    </div>
+</div>
+<div>
+    <div class="showContent" style="float: left; margin-left: 6px;">
+        <p id="HKI1" class="showClass"><img src="dragon/pic/Valverde.png" class="icon">&emsp;&emsp; &emsp; 
+            <img src="dragon/pic/promote.png" class="icon" id="PromoteHKpng">
+            <br/><font size="5">Flat C, Lower Floor, Lower Floor | Valverde | Admiraty</font> 
+            <br/>&emsp;Districts: Hong Kong Island
+            <br/>&emsp;Age: 22 Years &emsp; Effciency Ratio:72%
+            <br/>&emsp;&emsp;<font size="4">SFA 995ft²&emsp;GFA 1,373ft²</font>
+            <br/>&emsp;&emsp;&emsp;＠$43,015&emsp;&emsp;&emsp;＠$31,173<br/>
+            <br/>Selling Price:$42.8M
+            <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;            
+            <input type="button" value="More Informations" class="btn" onclick="window.location.href='demoMoreInfo.html'">
+            <br/>
+          </p>
+
+          <p id="NT1" class="showClass"><img src="dragon/pic/Yuccie.png" class="icon">&emsp;&emsp; &emsp; 
+            <br/><font size="5">Block 3, Lower Floor, Flat A | Yuccie Square | Yuen Long</font>
+            <br/>&emsp;Districts: New Territors
+            <br/>&emsp;Age: 04 Years &emsp; Effciency Ratio:/
+            <br/>&emsp;&emsp;<font size="4">SFA 643ft²</font>
+            <br/>&emsp;&emsp;&emsp;&emsp;＠$13,997<br/>
+            <br/>Selling Price:9M
+            <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;            
+            <input type="button" value="More Informations" class="btn">
+
+            <br/>
+          </p>
+
+          <p id="KL1" class="showClass"><img src="dragon/pic/Eltanin.png" class="icon">
+            <br/><font size="5">Flat A, Middle Floor, Block 2 | Eltanin - Square Mile | Tai Kok Tsui</font>
+            <br/>&emsp;Districts: Kowloon
+            <br/>&emsp;Age: 03 Years &emsp; Effciency Ratio:/
+            <br/>&emsp;&emsp;<font size="4">SFA 390ft²</font>
+            <br/>&emsp;&emsp;&emsp;&emsp;＠$21,487<br/>
+            <br/>Selling Price:8.38M
+            <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="button" value="More Informations" class="btn">
+          </p>
+
+          <p id="NT2" class="showClass"><img src="dragon/pic/Broadway.png" class="icon">
+            <br/><font size="5">Flat B, Middle Floor | Broadway 024 Phase I | Mei Foo Sun Chuen</font>
+            <br/>&emsp;Districts: New Territories
+            <br/>&emsp;Age: 51 Years &emsp; Effciency Ratio:75%
+            <br/>&emsp;&emsp;<font size="4">SFA 1,389ft²&emsp;GFA 1,851ft²</font>
+            <br/>&emsp;&emsp;&emsp;＠$17,135&emsp;&emsp;&emsp;＠$12,858<br/>
+            <br/>Selling Price:23.8M
+            <br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="button" value="More Informations" class="btn">
+          </p>
+    </div>
+</div>
+</section>
+</body>
+</html>

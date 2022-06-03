@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#ViewProperty").click(function(){
+            window.location.href= "dragon/PropertyManagement/hideRemovePropertyManager.html";
+          });
+    });
+    </script>
+    <meta charset="utf-8">
+    <title>Dropdown Menu Bar</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="viewUsersComments.css">
+  </head>
+  <body>
+    <nav>
+        <label class="logo"><img src="dragon/pic/logo.png"></label>
+        <ul>
+  <li><a class="active" href="ManagerMainPage.html">Home</a></li>
+  <li><a href="ViewAndSearchUserInformation.html">Account management
+            <i class="fas fa-caret-down"></i>
+          </a>
+            <ul>
+  </ul>
+  </li>
+  <li><a href="dragon/AppointmentManagement/ViewArrangedAppointmentsDetails.html">All arranged appointments details</a></li>
+  <li><a href="EditInformationManagerVer.html">Edit account
+          <i class="fas fa-caret-right"></i>
+      </a>
+  <li><a href="dragon/MainNoLogin.html">Log-out
+      <i class="fas fa-caret-down"></i>
+      </a>
+      </li>
+  </ul>
+  </li>
+  </ul>
+  </li>
+  </ul>
+  </nav>
+<div id="agentDetail">
+    <img src="E-011122.jpg" id="agentIcon">
+    <ui id="agentDetailText">
+        <li style="font-size: 22px;">周偉光</li>
+        <li style="font-size:19px">Chu wai kwong</li>
+        <li style="font-size: 16px;">Property agent</li>
+        <li style="font-size: 13px;color:black"><a href="tel:+85251234567">+852 51234567</a></li>
+    </ui>
+</div>
+<div class="outsideProfile">
+    <div class="profile">
+        <div class="profileYearList">年資</div>
+        <div class="profileYear">11-14年</div><br/>
+        <div class="position">分行</div>
+        <a href="https://goo.gl/maps/nwUuKQ54fFPRL3b9A" class="positionLink">
+            <i height="14px" width="11px" ></i>
+            <span class="sc-1xjzw53-2 yDuAh" style="font-size: 22px;">沙田 - 沙田分行</span>
+        </a>    
+        
+    </div>
+    <button id="ViewProperty" style="margin-bottom: 10px;">View agent property</button>
+    <br/>
+</div>
+<div class="breakLine"></div>
+<div class="outsideComment"><br/>
+    <div class="comment">
+        <div class="title">客戶回饋</div>
+        <div style="border: 1px solid; width:100%"></div>
+        <table class="commentList">
+            <tr class="titleList" >
+                <td class="userName">客戶名稱</td>
+                <td class="comment">回饋</td>
+                
+            </tr>
+            <tr class="titleObject">
+                <td class="userName">林可峰</td>
+                <td class="comment">Dllm clmbnmsl Dat ass awdijkdawdiuhawidhiuhfoanjdknaoidnw oaindoiawdajkikwdhiuoahsoiajoidjwoiajdoiasmlkfajiowdj</td>
+            </tr>
+            <tr>
+                <td><div class="breakLine"></div></td>
+                <td><div class="breakLine"></div></td>
+            </tr>     
+            <tr class="titleObject">
+                <td class="userName">Cost Yaul</td>
+                <td class="comment">Dllm clmbnmsl Dat ass awdijkdawdiuhawidhiuhfoanjdknaoidnw oaindoiawdajkikwdhiuoahsoiajoidjwoiajdoiasmlkfajiowdj</td>
+            </tr>       
+        </table>
+        <button class="btn"><a href="javascript:history.back()" style="color:white;">Go Back</a></button>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.calculateResult ul li, .otherPayment ul li{
+    padding-top:5px;
+}
+.otherPaymentText, .calculateResultText{
+    padding-bottom: 10px;
+    width:auto;
+    
+}
+.calculateResultText{
+    border-bottom: 1px solid;
+}
+.calculateResult , .otherPayment{
+    width:500px;
+    height:187px;
+}
+.calculateResult{
+    border-top:5px solid; 
+    border-left:5px solid;
+
+    border-color:#F0F0F0;
+}
+.otherPayment{
+    padding-top:10px;
+    border-bottom:5px solid; 
+    border-left:5px solid;
+
+    border-color:#F0F0F0;
+
+}
+.calculatePhoto{
+    display:inline-block;
+}

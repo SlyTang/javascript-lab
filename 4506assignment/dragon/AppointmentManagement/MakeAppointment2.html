@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="../jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript"> 
+
+    $(document).ready(function(){
+        $("#facebook").hide();
+        $("#next").hide();
+        $("#time").hide();
+
+    $("#next").click(function(){
+        $("iframe").hide();
+        $("#info").hide();
+        $("#facebook").show();             
+
+    setTimeout(function() {
+        window.location.href = 'MakeAppointment3.html';}, 2000);
+    });
+
+    $("#date").change(function(){
+      $("#time").show();
+      $("#next").show();
+    });
+
+    });      
+    </script>
+    <meta charset="utf-8">
+    <title>Make an appointment with the property agent</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="../../loadingAnimation.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+  
+    <nav>
+      <label class="logo"><img src="../pic/logo.png"></label>
+        <ul>
+  <li><a class="active" href="../../NormalUser.html">Home</a></li>
+  <li><a href="../SearchBrowsing/searchBuy.html">Buy</a></li>
+  <li><a href="../SearchBrowsing/searchRent.html">Rent</a></li>
+  <li><a href="../AppointmentManagement/RankAppointment.html">Your appointment</a></li>
+
+  <!-- <li><a href="#">Comments
+            <i class="fas fa-caret-down"></i>
+          </a>
+            <ul>
+  <li><a href="#">Customer</a></li>
+  <li><a href="#">Agent</a></li> -->
+  <li><a href="../../EditInformationCustomerVer.html">Edit account
+      </a></li>
+    <li><a href="../../calculater.html">Mortgage Calculater
+    </a></li>
+  <li><a href="../MainNoLogin.html">Log-out
+      </a></li>
+     
+  </nav>
+	
+    <section>
+
+    <div id="mainContent">
+        <div class = "login-form-container">
+            <div id='facebook' >
+              <div id='block_1' class='facebook_block'></div>
+              <div id='block_2' class='facebook_block'></div>
+              <div id='block_3' class='facebook_block'></div>
+              Processing please wait for a while!
+            </div>
+        </div>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FHong_Kong&amp;src=ZGdsbjVvNGg2Z2p2a2RqY21jN2UzbTN1Z29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uaG9uZ19rb25nI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%233F51B5&amp;color=%230B8043&amp;showTabs=0&amp;showPrint=0&amp;showDate=0&amp;showCalendars=0" style="border:solid 1px #777" width="600" height="550" frameborder="0" scrolling="no"></iframe>
+        <br/>
+        <br/>
+
+      <div id="info">
+        <h1>Booking:</h1>
+        <br />
+        
+      <div id="date">
+         Please select the booking date(if there is booking mark on it please dont select it):<br/> 
+        <input type="date" id="date" />
+      </div>
+
+      <div id="time">
+        Choose a meeting time you wish :    <br/> 
+        <select  width="300" style="width: 150px">
+          <option value="10:30">10:30</option>
+          <option value="13:30">13:30</option>
+          <option value="17:00">17:00</option>
+        </select>
+      </div>
+
+
+      </div>
+      <br/> <br/> <br/> 
+    <CENTER>
+        <input type="button" value="Next" class="btn" id="next">
+        <input type="button" value="Back" class="btn" onclick="window.location.href='MakeAppointment.html'">
+    </CENTER>   
+    </div>
+    
+    </section>
+
+  </body>
+
+</html>

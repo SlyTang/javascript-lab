@@ -1,0 +1,127 @@
+div.user{
+    width: 300px;
+    position: relative;
+    display: inline-block;
+    border:1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+#cancelSearching{
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+#addAgentBtn {
+    border: none;
+    background: #404040;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    padding: 10px;
+    margin-left:10px;
+}
+#addAgentBtn:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+    }
+#agent,#normalUser{
+    position: relative;
+    width: 97%;
+    left:20px;
+    top:10px;
+    padding: 5px;
+    list-style:none; 
+
+}
+
+#cancel{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background-color:black;
+    opacity:0.2;
+    z-index: 1;
+}
+/* add agent account */
+div.addAgent-form-container{
+    width:250px;
+    height: auto;
+    padding: 20px 30px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    /* new */
+    margin: 0;
+    background: while;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index:2;
+    background-color: #ffffff;
+    
+}
+
+ul.agentData-list{
+    list-style-type: none;
+}
+
+ul.agentData-list li{
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+ul.agentData-list li a{
+    
+    font-size: 10px;
+}
+ul.agentData-list li input[type="text"], ul.agentData-list li input[type="password"]{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color:#D3CCCB;
+    border: none;
+    border-radius: 5px;
+}
+
+ul.agentData-list li input[type="submit"]{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(77, 147, 226);
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+ul.agentData-list li input[type="submit"]:hover{
+    background-color: #FFF;
+    color: black;
+}
+/* search function */
+
+#btnBar{
+    width: 97.8%;
+    position: relative;
+    left:20px;
+    top:10px;
+}
+#search{
+    right:20px ;
+}
+#searchCondition{
+    right:100px;
+}
+#searchCondition,#search{
+    position :absolute;
+}

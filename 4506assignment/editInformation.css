@@ -1,0 +1,19 @@
+.bar{
+    border-radius: 5px;
+
+}
+#firstNameBar{
+    background-color: rgb(227, 240, 255);
+}
+#lastNameBar{
+    background-color:rgb(205, 225, 255);
+}
+#phoneNumberBar{
+    background-color: rgb(166, 203, 248);
+}
+#passwordInput{
+    background-color:  rgb(106, 168, 240);
+}
+#password2{
+    margin-bottom: 0;
+}

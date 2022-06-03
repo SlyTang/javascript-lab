@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="../jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript"> 
+  $(document).ready(function(){
+    var rank1 = null;
+    var rank2 = null;
+
+    $("#rankTable").hide();
+    $("#rankTable2").hide();
+    $("#rankTable3").hide();
+
+    $("#btnFRank").click(function(){
+
+      $("#rankTable").show();
+      $("#rankTable2").hide();
+      $("#rankTable3").hide();
+      $("#p2").hide();
+      $("#p3").hide();
+      $("#p4").hide();
+
+      $('input[type=radio][name=rank]').change(function(){
+      rank1 = $('input[name*=rank]:checked').val();
+        if (confirm("You have selected " + rank1 + " \n(You can click cancel to select again!)")){
+          $("#btnFRank").html(rank1);  
+          $("#rankTable").hide();
+          $("#p2").show();
+          $("#p3").show();
+          $("#p4").show();
+        }else{
+          $(this).prop('checked', false);
+        }
+      });
+    });
+
+
+    $("#btnSRank").click(function(){
+
+      $("#rankTable2").show();
+      $("#rankTable").hide();
+      $("#rankTable3").hide();
+      $("#p1").hide();
+      $("#p3").hide();
+      $("#p4").hide();
+
+      $('input[type=radio][name=rank2]').change(function(){
+      rank2 = $('input[name*=rank2]:checked').val();
+        if (confirm("You have selected " + rank2 + " \n(You can click cancel to select again!)")){
+          $("#btnSRank").html(rank2);  
+          $("#rankTable2").hide();
+          $("#p1").show();
+          $("#p3").show();
+          $("#p4").show();
+        }else{
+          $(this).prop('checked', false);
+        }
+      });
+    });
+
+  $("#btnTRank").click(function(){
+    $("#rankTable3").show();
+      $("#rankTable").hide();
+      $("#rankTable2").hide();
+      $("#p1").hide();
+      $("#p2").hide();
+      $("#p4").hide();
+
+      $('input[type=radio][name=rank3]').change(function(){
+      rank3 = $('input[name*=rank3]:checked').val();
+        if (confirm("You have selected " + rank3 + " \n(You can click cancel to select again!)")){
+          $("#btnTRank").html(rank3);  
+          $("#rankTable3").hide();
+          $("#p1").show();
+          $("#p2").show();
+          $("#p3").show();
+          $("#p4").show();
+        }else{
+          $(this).prop('checked', false);
+        }
+      });
+  });
+
+  $("#btnFoRank").click(function(){
+    if (confirm("You can not rank a not finished yet appointment")){
+
+    }
+  });
+
+
+  });      
+    </script>
+    <meta charset="utf-8">
+    <title>Rank the appointment</title>
+    <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../../viewUsersComments.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+  
+  
+    <nav>
+      <label class="logo"><img src="../pic/logo.png"></label>
+        <ul>
+  <li><a class="active" href="../../NormalUser.html">Home</a></li>
+  <li><a href="../SearchBrowsing/searchBuy.html">Buy</a></li>
+  <li><a href="../SearchBrowsing/searchRent.html">Rent</a></li>
+  <li><a href="../AppointmentManagement/RankAppointment.html">Your appointment</a></li>
+
+  <!-- <li><a href="#">Comments
+            <i class="fas fa-caret-down"></i>
+          </a>
+            <ul>
+  <li><a href="#">Customer</a></li>
+  <li><a href="#">Agent</a></li> -->
+  <li><a href="../../EditInformationCustomerVer.html">Edit account
+      </a></li>
+    <li><a href="../../calculater.html">Mortgage Calculater
+    </a></li>
+  <li><a href="../MainNoLogin.html">Log-out
+      </a></li>
+     
+  </nav>
+
+    <section>
+      <center><h1><span style="text-decoration:underline;">Your appointment</span></h1></center>
+      <br/>
+      <br/>
+
+      <center>
+        <table border="1">
+
+          <tr bgcolor="#c2c6c4">
+            <th width="30%">Your Booking</th>
+            <th width="10%">Date</th>
+            <th width="20%">Meeting place</th>
+            <th width="10%">Agent</th>
+            <th width="10%">status</th>
+            <th width="10%">Rank of appointment</th>
+          </tr>
+
+          <tr id="p1" style="text-align:center">
+            <td>Block 3, Lower Floor, Flat A | Yuccie Square | Yuen Long</td>
+            <td>03/10 17:00pm</td>
+            <td>Long Ping MTR Station Exit E</td>
+            <td>Agent A</td>
+            <td bgcolor="#90f53e">Done</td>
+            <td><button id="btnFRank" style="width:200px">Quite satisfied</button></td>
+          </tr>
+
+          <tr id="p2" style="text-align:center">
+            <td>Flat A, Middle Floor, Block 2 | Eltanin - Square Mile | Tai Kok Tsui</td>
+            <td>11/11 13:30pm</td>
+            <td>Olympic Station Exit A</td>
+            <td>Chu wai kwong</td>
+            <td bgcolor="#90f53e">Done</td>
+            <td><button id="btnSRank" style="width:200px">Quite satisfied</button></td>
+          </tr>
+
+          <tr id="p3" style="text-align:center">
+            <td>Flat B, Middle Floor | Broadway 024 Phase I | Mei Foo Sun Chuen</td>
+            <td>26/11 13:30pm</td>
+            <td>Mei Foo MTR Station Exit B</td>
+            <td>Chu wai kwong</td>
+            <td bgcolor="#90f53e">Done</td>
+            <td><button id="btnTRank" style="width:200px">Waiting for rank!</button></td>
+          </tr>
+
+          <tr id="p4" style="text-align:center">
+            <td>Flat C, Lower Floor, Lower Floor | Valverde | Admiraty</td>
+            <td>28/11 10:30am</td>
+            <td>Admiraty Mtr Station Exit A</td>
+            <td>Chu wai kwong</td>
+            <td bgcolor="#faafa6">Not Yet</td>
+            <td><button id="btnFoRank" style="width:200px">Waiting for rank!</button></td>
+          </tr>
+
+        </table>
+      <center>
+
+      <div id="rankTable">
+        <br/>
+        <br/>
+        <center>
+          <form>
+            <table border="1" width="700">
+            <tr bgcolor="#c2c6c4">
+              <th colspan="6">Rank</th> 
+            </tr>
+            <tr style="text-align:center">
+              <td>No comment</td>
+              <td>Quite dissatisfied</td>
+              <td>Not satisfied</td>
+              <td>Moderate</td>
+              <td>Satisfied</td>
+              <td>Quite satisfied</td>
+            </tr>
+            <tr style="text-align:center">
+              <td><input type="radio" name="rank" id="rank" value="No comment"></td>
+              <td><input type="radio" name="rank" id="rank" value="Quite dissatisfied"></td>
+              <td><input type="radio" name="rank" id="rank" value="Not satisfied"></td>
+              <td><input type="radio" name="rank" id="rank" value="Moderate"></td>
+              <td><input type="radio" name="rank" id="rank" value="Satisfied"></td>
+              <td><input type="radio" name="rank" id="rank" value="Quite satisfied"> </td>
+            </tr>
+          </table>
+          </form>
+        </center>
+      </div>
+      <div id="rankTable2">
+        <br/>
+        <br/>
+        <center>
+          <form>
+            <table border="1" width="700">
+            <tr bgcolor="#c2c6c4">
+              <th colspan="6">Rank</th> 
+            </tr>
+            <tr style="text-align:center">
+              <td>No comment</td>
+              <td>Quite dissatisfied</td>
+              <td>Not satisfied</td>
+              <td>Moderate</td>
+              <td>Satisfied</td>
+              <td>Quite satisfied</td>
+            </tr>
+            <tr style="text-align:center">
+              <td><input type="radio" name="rank2" id="rank2" value="No comment"></td>
+              <td><input type="radio" name="rank2" id="rank2" value="Quite dissatisfied"></td>
+              <td><input type="radio" name="rank2" id="rank2" value="Not satisfied"></td>
+              <td><input type="radio" name="rank2" id="rank2" value="Moderate"></td>
+              <td><input type="radio" name="rank2" id="rank2" value="Satisfied"></td>
+              <td><input type="radio" name="rank2" id="rank2" value="Quite satisfied"> </td>
+            </tr>
+          </table>
+          </form>
+        </center>
+      </div>
+      <div id="rankTable3">
+        <br/>
+        <br/>
+        <center>
+          <form>
+            <table border="1" width="700">
+            <tr bgcolor="#c2c6c4">
+              <th colspan="6">Rank</th> 
+            </tr>
+            <tr style="text-align:center">
+              <td>No comment</td>
+              <td>Quite dissatisfied</td>
+              <td>Not satisfied</td>
+              <td>Moderate</td>
+              <td>Satisfied</td>
+              <td>Quite satisfied</td>
+            </tr>
+            <tr style="text-align:center">
+              <td><input type="radio" name="rank3" id="rank3" value="No comment"></td>
+              <td><input type="radio" name="rank3" id="rank3" value="Quite dissatisfied"></td>
+              <td><input type="radio" name="rank3" id="rank3" value="Not satisfied"></td>
+              <td><input type="radio" name="rank3" id="rank3" value="Moderate"></td>
+              <td><input type="radio" name="rank3" id="rank3" value="Satisfied"></td>
+              <td><input type="radio" name="rank3" id="rank3" value="Quite satisfied"> </td>
+            </tr>
+          </table>
+          </form>
+        </center>
+      </div>
+      
+    </section>
+  </body>
+
+</html>

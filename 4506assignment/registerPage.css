@@ -1,0 +1,60 @@
+
+.register-form{
+    width:250px;
+    height: auto;
+    padding: 20px 30px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+ul.register-list{
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+}
+
+ul.register-list li{
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+ul.register-list li input[type="text"], ul.register-list li input[type="password"]{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color:#D3CCCB;
+    border: none;
+    border-radius: 5px;
+}
+
+ul.register-list li input[type="submit"],#cancel{
+    width: 250px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(77, 147, 226);
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+ul.register-list li input[type="submit"]:hover, #cancel:hover{
+    background-color: #FFF;
+    color: black;
+}
+/* warning */
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    margin: 10px 0px;
+padding:10px;
+
+}
+#errorIcon{
+    width:15px;
+    height:15px ;
+    vertical-align:middle;
+
+}

@@ -1,0 +1,249 @@
+/*menu*/
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+
+body{
+  font-family: sans-serif;
+  user-select: none;
+}
+nav .logo{
+  color: white;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-left: 110px;
+}
+
+nav .logo img{
+  width:160px;
+  height:70px;
+}
+
+
+nav{
+  height: 70px;
+  background: #063247;
+  box-shadow: 0 3px 15px rgba(0,0,0,.4);
+}
+nav ul{
+  float: right;
+  margin-right: 30px;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  color: white;
+  display: block;
+  padding: 0 15px;
+  line-height: 70px;
+  font-size: 20px;
+  background: #063247;
+  transition: .5s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+  color: #23dbdb;
+}
+nav ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid #23dbdb;
+  opacity: 0;
+  visibility: hidden;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+nav ul ul li{
+  width: 150px;
+  display: list-item;
+  position: relative;
+  border: 1px solid #042331;
+  border-top: none;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+nav ul ul li a i{
+  margin-left: 45px;
+}
+section{
+  background: url(bg.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+/*body*/
+.icon{
+    width: 90px !important;
+    height: 90px !important;
+}
+
+#searchingbar input {
+  width: 96%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#searchingbar button {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#typebar{
+  margin-left: 50%;
+}
+
+#typebar ul{
+  margin-right: 30px;
+}
+
+#typebar ul li{
+  display: inline-block;
+}
+#typebar ul li a{
+  color: white;
+  display: block;
+  padding: 0 30px;
+  line-height: 30px;
+  font-size: 20px;
+  background: #063247;
+  transition: .5s;
+  text-decoration: underline;
+
+}
+#typebar ul li a:hover,
+#typebar ul li a.active{
+  color: #23dbdb;
+}
+
+#filters {
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.inputform {
+  width: 500px;
+  clear: both;
+}
+.inputform input {
+  width: 100%;
+  clear: both;
+}
+
+#saleForm{
+  position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+#mainContent{
+  width: 750px;
+  position: absolute  ;
+  margin-top: 1%;
+  left: 35%;
+  margin-right: -50%;
+
+}
+
+.showClass{
+  margin-bottom: 50px;
+  background-color: khaki;
+}
+
+.btn{
+  color: white;
+  padding: 0 10px;
+  line-height: 30px;
+  font-size: 20px;
+  background: green;
+
+}
+
+#btnShowNT,#btnShowKL,#btnShowHK {
+  background: green;
+}
+
+#btnHideNT,#btnHideKL,#btnHideHK {
+  background: rgb(134, 134, 24);
+}
+
+#btnDelNT,#btnDelKL,#btnDelHK {
+  background: red;
+}
+
+#btnPromotionNT,#btnPromotionKL,#btnPromotionHK {
+  background: purple;
+}
+
+#btnEditNT,#btnEditKL,#btnEditHK {
+  background: salmon;
+}
+
+
+
+.placeholder{
+  position: relative;
+}
+
+.placeholder::after{
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  content: attr(data-placeholder);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.price{
+  padding-left: 15px;
+  padding-top: 4px;
+}
+
+.show{
+  margin-bottom: 10px;
+  background-color: khaki;
+  width: 33%;
+  height: 300px;
+}
+
+.side{
+  margin-top: 10px;
+  background-color: lightslategrey;
+  width: 10%;
+  height: auto;
+}
+
+.side ul li{
+  margin-top: 10%;
+}
+
+.showContent{
+  width: 80%;
+  margin-top: 10px;
+
+}
