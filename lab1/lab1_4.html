@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $("p").hide();
+                $("#button1").click(function(){
+                    $("p:gt(2)").hide();
+                    $("p:lt(3)").show();
+                });
+                $("#button2").click(function(){
+                    $("p:lt(3)").hide();
+                    $("p:gt(2)").show();
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <button id=button1>Show first 3 items</button>
+    <button id=button2>Show last 3 items</button>
+   <div>
+      <p>Item 1</p>
+      <p>Item 2</p>
+      <p>Item 3</p>
+      <p>Item 4</p>
+      <p>Item 5</p>
+      <p>Item 6</p>
+   </div>
+
+    </body>
+</html>

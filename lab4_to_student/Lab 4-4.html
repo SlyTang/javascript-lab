@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>the title</title>
+   <script type="text/javascript" 
+   src="jslib/jquery-1.11.1.js"></script>
+
+   <script type="text/javascript" language="javascript">
+   $(document).ready(function() {
+		$("#driver").click(function(){
+		
+		$("#stage").css({ 'background-color':''});
+			$.getJSON("resultEx.json",function(jd){
+				$("#stage").html("");
+				$("#stage").append("<table border=1 style='  border-collapse: collapse;' bgcolor='pink'><tr bgcolor='green'><th>Stud_ID</th>"+
+				"\t"+"<th>Name</th>"+
+				"\t"+"<th>LastName</th>"+
+				"\t"+"<th>Age</th>"+
+				"\t"+"<th>Sex</th></tr>"+"<br />"+
+				"<tr><td>"+jd.studid[0]+"</td>"+
+				"\t"+"<td>"+jd.name[0]+"</td>"+
+				"\t"+"<td>"+jd.lastname[0]+"</td>"+
+				"\t"+"\t"+"<td>"+jd.age[0]+"</td>"+
+				"\t"+"<td>"+jd.sex[0]+"</td></tr>"+"<br />"+
+				
+				"<tr><td>"+jd.studid[1]+"</td>"+
+				"\t"+"<td>"+jd.name[1]+"</td>"+
+				"\t"+"<td>"+jd.lastname[1]+"</td>"+
+				"\t"+"\t"+"<td>"+jd.age[1]+"</td>"+
+				"\t"+"<td>"+jd.sex[1]+"</td></tr>"+"<br />"+
+				
+				"<tr><td>"+jd.studid[2]+"</td>"+
+				"\t"+"<td>"+jd.name[2]+"</td>"+
+				"\t"+"<td>"+jd.lastname[2]+"</td>"+
+				"\t"+"\t"+"<td>"+jd.age[2]+"</td>"+
+				"\t"+"<td>"+jd.sex[2]+"</td></tr>"+"<br />"+
+				
+				"<tr><td>"+jd.studid[3]+"</td>"+
+				"\t"+"<td>"+jd.name[3]+"</td>"+
+				"\t"+"<td>"+jd.lastname[3]+"</td>"+
+				"\t"+"\t"+"<td>"+jd.age[3]+"</td>"+
+				"\t"+"<td>"+jd.sex[3]+"</td></tr>"+"<br /></table>");
+
+				});
+		});
+   });
+   </script>
+</head>
+
+<body>
+   <p>Click on the button to load students' records:</p>
+   <pre>
+   <div id="stage" style="background-color:pink;">
+            STAGE
+   </div>
+   </pre>
+   <input type="button" id="driver" value="Load Data" />
+</body
+</html>
+
+
+

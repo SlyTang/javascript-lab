@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                alert("Welcome !");
+            });
+            $("#button2").dblclick(function(){
+                alert("Good-bye !");
+            });
+            $("#button3").mouseenter(function(){
+                $(this).hide();
+            });
+            $("#button3").mouseleave(function(){
+                $(this).show();
+            });
+            $("input").focus(function(){
+                $(this).css("background-color","green");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color","red");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<button  id="button1">Button 1</button>
+<button  id="button2">Button 2</button>
+<button  id="button3">Button 3</button>
+<p>
+Input 1: <input />
+Input 2: <input />
+</p>
+
+</body>
+
+</html>

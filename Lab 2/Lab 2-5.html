@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+<title></title>
+
+<script src="jslib/jquery-1.11.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+   $("#condition").keyup(function(){
+      $("table tr").hide().filter(":contains(" + $(this).val() + ")").show();
+   });
+  })
+</script>
+</head>
+<body>
+<div>
+<br/>
+Filter:
+<input id="condition" />
+<br/>
+</div>
+   <table>
+      <tr><th>No</th><th>Language</th><th>Price</th></tr>
+      <tr><td>001</td><td>C#</td><td>7500</td></tr>
+      <tr><td>012</td><td>Java</td><td>7000</td></tr>
+      <tr><td>013</td><td>C</td><td>6000</td></tr>
+      <tr><td>014</td><td>C++</th><td>6500</td></tr>
+      <tr><td>125</td><td>PHP</th><td>5000</td></tr>
+      <tr><td>126</td><td>jQuery</th><td>9000</td></tr>
+      <tr><td>157</td><td>HTML5</td><td>8000</td></tr>
+      <tr><td>158</td><td>VBasic</td><td>6500</td></tr>
+   </table>
+</body>
+</html>

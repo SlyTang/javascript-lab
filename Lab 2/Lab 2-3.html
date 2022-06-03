@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="jslib/jquery-1.11.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").click(function() {
+                $(this).css("background-color", "red");
+                $(this).val("X");
+            });
+            $("input").dblclick(function() {
+                $(this).css("background-color", "green");
+                $(this).val("O");
+            });
+});
+</script>
+</head>
+<body>
+
+<h1>Tic-Tac-Toe</h1>
+
+<table  border="1">
+<tr >
+  <th><input type=button class="abc" value=&nbsp></th>
+  <th><input type=button class="abc" value=&nbsp></th>
+  <th><input type=button class="abc" value=&nbsp></th>
+</tr>
+<tr>
+  <th><input type=button class="abc" value=&nbsp></th>
+  <th><input type=button class="abc" value=&nbsp></th>
+  <th><input type=button class="abc" value=&nbsp></th>
+</tr>
+<tr>
+  <th><input type=button class="abc" value=&nbsp></th>
+  <th><input type=button class="abc" value=&nbsp></th>
+  <th><input type=button class="abc" value=&nbsp></th>
+</tr>
+</table>
+
+</body>
+</html>

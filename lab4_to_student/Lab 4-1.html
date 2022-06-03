@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>the title</title>
+   <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+   <script type="text/javascript" language="javascript">
+
+   $(document).ready(function() {
+	$("#driver").click(function(){
+		$("#stage1").load("result1.html");
+		$("#stage2").load("result2.html");
+	});
+   });
+   </script>
+</head>
+<body>
+   <p>Click on the button to load result.html file:</p>
+   <table><tr><td>
+   <div id="stage1" style="background-color:pink;">
+          STAGE 1
+   </div></td><td>
+   <div id="stage2" style="background-color:yellow;">
+	  STAGE 2
+   </div></td></tr>
+   </table>
+   <input type="button" id="driver" value="Load Data" />
+</body>
+</html>
+

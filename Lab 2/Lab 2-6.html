@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Modify BGcolor</title>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+        $("#color").change(function() {
+            $("#div1").css("background-color", $(this).val());
+        });
+	});
+    </script>
+</head>
+<body>
+    <center>
+	<div id="div1" style="width:200px;height:200px;border:black 1px dotted;background:'yellow';"></div>
+    <select id="color">
+    	<option value="white">Choose color</option>
+        <option value="black">black</option>
+        <option value="gray">gray</option>
+        <option value="orange">orange</option>
+        <option value="yellow">yellow</option>
+        <option value="red">red</option>
+    </select><br />
+    </center>
+</body>
+</html>

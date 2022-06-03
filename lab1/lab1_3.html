@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function(){
+            $("#click").click(function(){
+                $(this).css("background-color","red");
+            });
+            $("input").focus(function(){
+                $(this).css("background-color","green");
+            });
+            $("input").change(function(){
+                $(this).css("background-color","red");
+            });
+            $("input").focusout(function(){
+                $(this).css("background-color","blue");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button  id="click">Click</button>
+    <input />  
+</body>
+</html>

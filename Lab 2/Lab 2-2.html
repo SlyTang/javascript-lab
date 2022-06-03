@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>the title</title>
+   <script type="text/javascript" 
+   src="jslib/jquery-1.11.1.js"></script>
+   <script type="text/javascript" language="javascript">
+
+   $(document).ready(function() {
+      $("#button1").click(function(){
+         $("#myimg").attr("src","photo1.jpg");
+      });
+      $("#button2").click(function(){
+         $("#myimg").attr("src","photo2.jpg");
+      });
+   });
+
+   </script>
+</head>
+<body>
+   <h1>Flower Photo</h1>
+   <button id="button1">Orange</button>
+   <button id="button2">Yellow</button>
+   <div>
+      <img id="myimg"  src="" width="100" height="100" alt="Sample image" />
+   </div>
+</body>
+</html>
+

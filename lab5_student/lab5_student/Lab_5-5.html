@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Toggle text</title>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+            $("button").click(function(){
+             $("#myimg1").animate({
+                 left:"250px",
+                 top:"250px"
+             },2000).animate({
+                 left:"10px",
+                 top:"100px",opacity:"0.5",height:"50px",width:"50px"
+             },3000)
+             $("#myimg2").animate({
+                 left:"200px",
+                 top:"200px"
+             },2000).animate({
+                 left:"60px",
+                 top:"100px",opacity:"0.5",height:"50px",width:"50px"
+             },3000)
+             $("#myimg3").animate({
+                 left:"200px",
+                 top:"250px"
+             },2000).animate({
+                 left:"10px",
+                 top:"150px",opacity:"0.5",height:"50px",width:"50px"
+             },3000)
+             $("#myimg4").animate({
+                 left:"250px",
+                 top:"200px"
+             },2000).animate({
+                 left:"60px",
+                 top:"150px",opacity:"0.5",height:"50px",width:"50px"
+             },3000)
+            });
+            
+         });
+
+    </script>
+</head>
+<body>
+    <button>Start Animation</button>
+    <p>Moving the square!</p>
+    <div style="background:green;
+         left:10px; top:100px; 
+         height:100px;width:100px;position:absolute;">
+    </div>
+<div><img id="myimg1" style="width:50px;height:40px;left:10px; top:200px;position:absolute;"  
+	src="jslib/jquery-logo.jpg" alt="Sample image" />
+</div>
+<div><img id="myimg2" style="width:50px;height:40px;left:10px; top:240px;position:absolute;"  
+	src="jslib/jquery-logo.jpg" alt="Sample image" />
+</div>
+<div><img id="myimg3" style="width:50px;height:40px;left:10px; top:280px;position:absolute;"  
+	src="jslib/jquery-logo.jpg" alt="Sample image" />
+</div>
+<div><img id="myimg4" style="width:50px;height:40px;left:10px; top:320px;position:absolute;"  
+	src="jslib/jquery-logo.jpg" alt="Sample image" />
+</div>
+</body>
+</html>

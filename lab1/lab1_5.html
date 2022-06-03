@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                str = "";
+                var par = $("li");
+                for(i=0;i<par.length;i++){
+                    str = str + "Found item: " + par[i].innerHTML + "\n";
+                }
+                alert(str);
+            });
+        </script>
+    </head>
+    <body>
+        <ol>
+            <li>This is the first item.</li>
+            <li>This is the second item.</li>
+            <li>This is the third item.</li>
+         </ol>
+    </body>
+</html>
